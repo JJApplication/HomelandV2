@@ -1,0 +1,101 @@
+{
+  "nav": {
+    "home": "首页",
+    "projects": "项目",
+    "blog": "博客",
+    "about": "关于",
+    "marquee": "+++ 正在接收新项目合作 +++"
+  },
+  "hero": {
+    "slogan": "享受生活",
+    "eyebrow": "创意方向",
+    "titleTop": "打造更有识别度的",
+    "titleBottom": "品牌体验。",
+    "subtitle": "首页改为更贴近你设计稿的亮色编辑风布局，用留白、分栏和细边框建立更清晰的秩序感。",
+    "scrollHint": "继续下滑",
+    "visualLabel": "视觉系统",
+    "visualDescription": "采用浅色纸张质感、工业化网格线和克制的亮绿色点缀，整体气质更接近你的原始设计。",
+    "metricLabel": "项目数量",
+    "metricValue": "12+",
+    "metricDescription": "品牌与产品上线案例",
+    "availability": "目前接受精选合作，包括官网改版、视觉系统整理与产品展示型前端页面。"
+  },
+  "cta": {
+    "contact": "联系我",
+    "github": "GitHub",
+    "email": "邮箱联系",
+    "letsWork": "准备开始沟通",
+    "yourProject": "一起推进你的下一个项目。"
+  },
+  "blog": {
+    "title": "博客",
+    "subtitle": "思考、笔记与探索。",
+    "readMore": "阅读更多",
+    "empty": "暂无文章 — 敬请期待。"
+  },
+  "about": {
+    "title": "关于",
+    "subtitle": "关于我、我的工作和我所擅长的领域。",
+    "introHeading": "你好，我是一名开发者。",
+    "introBody": "我专注于构建清晰、高性能且令人愉悦的极简数字体验。",
+    "projectsTitle": "精选项目",
+    "projectsSubtitle": "我引以为豪的近期作品。",
+    "skillsTitle": "技术栈",
+    "skillsSubtitle": "我每天使用的工具。"
+  },
+  "home": {
+    "partnersLabel": "合作品牌",
+    "statement": "品牌不只是一个 Logo。",
+    "statementBody": "我更关注品牌在页面里的结构感、节奏感和展示方式，让官网像系统而不是简单堆砌的装饰。",
+    "servicesLabel": "服务内容",
+    "footerNote": "亮色编辑型视觉系统",
+    "partners": ["Abstract", "Invision", "Vision Studio", "Circle One"],
+    "services": [
+      {
+        "title": "品牌策略",
+        "description": "从定位、命名语气到页面表达，帮助产品建立更鲜明的整体方向。",
+        "link": "查看更多"
+      },
+      {
+        "title": "品牌设计",
+        "description": "搭建可复用的视觉系统，包括版式规则、字体层级和界面细节。",
+        "link": "查看更多"
+      },
+      {
+        "title": "平面与内容视觉",
+        "description": "为上线页面、宣传素材和内容模块提供统一且有辨识度的视觉输出。",
+        "link": "查看更多"
+      },
+      {
+        "title": "持续月度支持",
+        "description": "围绕新栏目、活动页与日常内容更新，持续迭代网站界面与展示效果。",
+        "link": "查看更多"
+      }
+    ]
+  },
+  "projects": {
+    "eyebrow": "作品页",
+    "applyNow": "立即申请",
+    "sideLabel": "项目孵化",
+    "sideBody": "参考第二张设计稿，改成更像作品归档页的亮色项目展示结构。",
+    "countLabel": "项目数",
+    "filters": ["全部", "孵化", "加速", "投资"],
+    "searchPlaceholder": "搜索",
+    "footerLabel": "准备好沟通",
+    "footerTitle": "你的产品准备启动了吗？",
+    "primaryAction": "申请孵化",
+    "secondaryAction": "申请资金支持",
+    "statLabels": ["资金", "增长", "回报", "合作"]
+  },
+  "footer": {
+    "copyright": "© 2026 Homeland. 保留所有权利。",
+    "tagline": "用心构建。",
+    "description": "网站整体已切换为更明亮的设计系统，并朝你的两张参考图靠拢。",
+    "availability": "开放官网设计、前端实现与个人作品站定制合作。"
+  },
+  "lang": {
+    "en": "English",
+    "zh": "中文",
+    "ja": "日本語"
+  }
+}

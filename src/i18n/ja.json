@@ -1,0 +1,101 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "projects": "プロジェクト",
+    "blog": "ブログ",
+    "about": "概要",
+    "marquee": "+++ 新しいプロジェクトを受付中 +++"
+  },
+  "hero": {
+    "slogan": "人生を楽しもう",
+    "eyebrow": "クリエイティブディレクション",
+    "titleTop": "個性のある",
+    "titleBottom": "ブランド体験をつくる。",
+    "subtitle": "トップページを、より明るく編集的なレイアウトへ再構成し、あなたのデザイン原稿に近い雰囲気へ整えました。",
+    "scrollHint": "スクロールダウン",
+    "visualLabel": "ビジュアルシステム",
+    "visualDescription": "明るい紙面感、工業的なグリッド線、控えめなライムアクセントで原稿のムードに寄せています。",
+    "metricLabel": "プロジェクト数",
+    "metricValue": "12+",
+    "metricDescription": "ブランドとプロダクトの公開実績",
+    "availability": "Webサイト改修、ビジュアル整理、プロダクト紹介ページ制作の相談を受け付けています。"
+  },
+  "cta": {
+    "contact": "お問い合わせ",
+    "github": "GitHub",
+    "email": "メールで連絡",
+    "letsWork": "相談の準備はできています",
+    "yourProject": "次のプロジェクトを一緒に進めましょう。"
+  },
+  "blog": {
+    "title": "ブログ",
+    "subtitle": "思考、メモ、探求。",
+    "readMore": "続きを読む",
+    "empty": "まだ投稿はありません — 近日公開。"
+  },
+  "about": {
+    "title": "概要",
+    "subtitle": "私自身、仕事、そして技術について。",
+    "introHeading": "こんにちは、開発者です。",
+    "introBody": "明快さ、パフォーマンス、そして喜びを重視した、思慮深くミニマルなデジタル体験を構築しています。",
+    "projectsTitle": "選ばれたプロジェクト",
+    "projectsSubtitle": "誇りに思う最近の作品。",
+    "skillsTitle": "技術スタック",
+    "skillsSubtitle": "毎日使用するツール。"
+  },
+  "home": {
+    "partnersLabel": "取引先ブランド",
+    "statement": "ブランドは、単なるロゴではない。",
+    "statementBody": "余白、構造、表示のリズムまで設計し、サイト全体を一つのシステムとして見せることを重視します。",
+    "servicesLabel": "サービス",
+    "footerNote": "ライトモードのエディトリアルUI",
+    "partners": ["Abstract", "Invision", "Vision Studio", "Circle One"],
+    "services": [
+      {
+        "title": "ブランド戦略",
+        "description": "ポジショニングから見せ方まで、プロダクトの声をより鮮明に整えます。",
+        "link": "詳しく見る"
+      },
+      {
+        "title": "ブランドデザイン",
+        "description": "レイアウト規則、文字階層、UIディテールを含む再利用可能な視覚システムを構築します。",
+        "link": "詳しく見る"
+      },
+      {
+        "title": "グラフィックデザイン",
+        "description": "ランディングページやキャンペーン素材、コンテンツ面の見え方を統一します。",
+        "link": "詳しく見る"
+      },
+      {
+        "title": "月次サポート",
+        "description": "新しいセクションや更新コンテンツに合わせて、継続的にサイト表現を改善します。",
+        "link": "詳しく見る"
+      }
+    ]
+  },
+  "projects": {
+    "eyebrow": "ポートフォリオ",
+    "applyNow": "今すぐ申請",
+    "sideLabel": "インキュベーション",
+    "sideBody": "2枚目の原稿を参照し、アーカイブ感のある明るいプロジェクトページへ再設計しました。",
+    "countLabel": "件数",
+    "filters": ["すべて", "インキュベーション", "アクセラレーション", "投資"],
+    "searchPlaceholder": "検索",
+    "footerLabel": "相談受付中",
+    "footerTitle": "あなたのプロダクトを始動しますか？",
+    "primaryAction": "インキュベーション申請",
+    "secondaryAction": "資金支援を申請",
+    "statLabels": ["資金", "成長", "ROI", "提携"]
+  },
+  "footer": {
+    "copyright": "© 2026 Homeland. 全著作権所有。",
+    "tagline": "丁寧に構築。",
+    "description": "サイト全体を、より明るく原稿準拠のデザインシステムへ調整しました。",
+    "availability": "Webデザイン、フロントエンド実装、ポートフォリオサイト制作の相談を歓迎します。"
+  },
+  "lang": {
+    "en": "English",
+    "zh": "中文",
+    "ja": "日本語"
+  }
+}

@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  :root {
+    color-scheme: light;
+  }
+  body {
+    background-color: #F4F1EA;
+    color: #111111;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image:
+      linear-gradient(to right, rgba(38, 34, 29, 0.08) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(38, 34, 29, 0.08) 1px, transparent 1px);
+    background-size: 72px 72px;
+  }
+  *:focus-visible {
+    outline: 2px solid #FF6A1A;
+    outline-offset: 2px;
+  }
+  #root {
+    min-height: 100dvh;
+  }
+}
+
+@layer utilities {
+  .container-content {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .paper-panel {
+    background-color: rgba(252, 251, 248, 0.94);
+    backdrop-filter: blur(10px);
+  }
+  .grid-frame {
+    position: relative;
+  }
+  .grid-frame::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image:
+      linear-gradient(to right, rgba(38, 34, 29, 0.09) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(38, 34, 29, 0.09) 1px, transparent 1px);
+    background-size: 120px 120px;
+    opacity: 0.65;
+  }
+  .section-label {
+    font-size: 0.72rem;
+    line-height: 1rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #6F695F;
+  }
+  .display-title {
+    font-family: 'Archivo', 'Inter', system-ui, sans-serif;
+    letter-spacing: -0.05em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "blog": "Blog",
+    "about": "About",
+    "marquee": "+++ OPEN FOR NEW PROJECTS +++"
+  },
+  "hero": {
+    "slogan": "Enjoy your life",
+    "eyebrow": "Creative direction",
+    "titleTop": "Creating",
+    "titleBottom": "unique brands.",
+    "subtitle": "A light editorial homepage for a developer brand, shaped with calm whitespace, structured grids, and a more tactile visual rhythm.",
+    "scrollHint": "Scroll down",
+    "visualLabel": "Visual system",
+    "visualDescription": "Soft industrial layout with bright surfaces, technical borders, and a subtle lime accent inspired by your design draft.",
+    "metricLabel": "Projects",
+    "metricValue": "12+",
+    "metricDescription": "brand and product launches",
+    "availability": "Available for selected collaborations, visual systems, and product-facing front-end work."
+  },
+  "cta": {
+    "contact": "Contact",
+    "github": "GitHub",
+    "email": "Email Me",
+    "letsWork": "Ready to discuss",
+    "yourProject": "Let's work on your next project."
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Thoughts, notes, and explorations.",
+    "readMore": "Read more",
+    "empty": "No posts yet — coming soon."
+  },
+  "about": {
+    "title": "About",
+    "subtitle": "A little about me, my work, and my craft.",
+    "introHeading": "Hi, I'm a developer.",
+    "introBody": "I build thoughtful, minimal digital experiences with a focus on clarity, performance, and joy.",
+    "projectsTitle": "Selected Projects",
+    "projectsSubtitle": "Recent work I'm proud of.",
+    "skillsTitle": "Tech Stack",
+    "skillsSubtitle": "Tools I use daily."
+  },
+  "home": {
+    "partnersLabel": "Brands I've worked with",
+    "statement": "A brand is not just a logo.",
+    "statementBody": "I shape clean interfaces, launch pages, and product presentations that feel more like systems than decoration.",
+    "servicesLabel": "Services",
+    "footerNote": "Light mode editorial system",
+    "partners": ["Abstract", "Invision", "Vision Studio", "Circle One"],
+    "services": [
+      {
+        "title": "Brand Strategy",
+        "description": "Positioning, naming cues, and interface direction aligned to a sharper product voice.",
+        "link": "More information"
+      },
+      {
+        "title": "Brand Design",
+        "description": "A modular visual system with layout rules, type hierarchy, and tactile UI details.",
+        "link": "More information"
+      },
+      {
+        "title": "Graphic Design",
+        "description": "Key visuals, launch graphics, and content assets that stay consistent across product surfaces.",
+        "link": "More information"
+      },
+      {
+        "title": "Monthly Support",
+        "description": "Long-term UI iteration for new sections, campaigns, and content refreshes.",
+        "link": "More information"
+      }
+    ]
+  },
+  "projects": {
+    "eyebrow": "Portfolio",
+    "applyNow": "Apply now",
+    "sideLabel": "Incubation studio",
+    "sideBody": "Meet our recent incubations and structured launch materials.",
+    "countLabel": "Projects",
+    "filters": ["All", "Incubation", "Acceleration", "Investment"],
+    "searchPlaceholder": "Search",
+    "footerLabel": "Ready to discuss",
+    "footerTitle": "Your product launch?",
+    "primaryAction": "Apply for incubation",
+    "secondaryAction": "Apply for funding",
+    "statLabels": ["Funds", "Growth", "ROI", "Partners"]
+  },
+  "footer": {
+    "copyright": "© 2026 Homeland. All rights reserved.",
+    "tagline": "Built with care.",
+    "description": "A clearer, brighter website system aligned with your design references and ready for future content.",
+    "availability": "Open for web design, front-end implementation, and portfolio customization."
+  },
+  "lang": {
+    "en": "English",
+    "zh": "中文",
+    "ja": "日本語"
+  }
+}
