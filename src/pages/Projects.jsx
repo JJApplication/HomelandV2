@@ -55,7 +55,7 @@ const PROJECTS = [
 ]
 
 // 项目页组件，按参考稿组织作品总览、精选卡片与项目网格。
-export default function About() {
+export default function Projects() {
   const { t } = useTranslation()
   const filters = t('projects.filters', { returnObjects: true })
 

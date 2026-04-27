@@ -1,15 +1,79 @@
+import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Mail, Github, ArrowDown, ArrowUpRight } from 'lucide-react'
 import Button from '../components/Button'
+import ScrambleText from '../components/ScrambleText'
+import { EMAIL, GITHUB } from '../constants'
+const TITLE_PUNCTUATION_REGEX = /[.,!?;:，。！？；：、]/u
 
-const EMAIL = 'hello@example.com'
-const GITHUB = 'https://github.com'
+function findTextRanges(text, tokens) {
+  const characters = Array.from(text)
+  const ranges = []
+  let searchFrom = 0
+
+  tokens.forEach((token) => {
+    const tokenCharacters = Array.from(token)
+
+    for (let start = searchFrom; start <= characters.length - tokenCharacters.length; start += 1) {
+      const matched = tokenCharacters.every(
+        (character, offset) => characters[start + offset] === character,
+      )
+
+      if (matched) {
+        ranges.push({ start, end: start + tokenCharacters.length })
+        searchFrom = start + tokenCharacters.length
+        break
+      }
+    }
+  })
+
+  return ranges
+}
+
+function buildVisibleRanges(text) {
+  const characters = Array.from(text)
+  const ranges = []
+  let rangeStart = null
+
+  characters.forEach((character, index) => {
+    const canScramble = /\S/u.test(character) && !TITLE_PUNCTUATION_REGEX.test(character)
+
+    if (canScramble && rangeStart === null) {
+      rangeStart = index
+    }
+
+    if (!canScramble && rangeStart !== null) {
+      ranges.push({ start: rangeStart, end: index })
+      rangeStart = null
+    }
+  })
+
+  if (rangeStart !== null) {
+    ranges.push({ start: rangeStart, end: characters.length })
+  }
+
+  return ranges
+}
+
+function resolveTitleScrambleRanges(language, text) {
+  if (language.toLowerCase().startsWith('en')) {
+    const ranges = findTextRanges(text, ['unique', 'brands'])
+    return ranges.length > 0 ? ranges : buildVisibleRanges(text)
+  }
+
+  return buildVisibleRanges(text)
+}
 
 // 首页组件，按照亮色编辑风格组织首屏、合作品牌与服务介绍。
 export default function Home() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const partners = t('home.partners', { returnObjects: true })
   const services = t('home.services', { returnObjects: true })
+  const titleBottom = t('hero.titleBottom')
+  const titleBottomRanges = useMemo(
+    () => resolveTitleScrambleRanges(i18n.language, titleBottom),
+    [i18n.language, titleBottom],
+  )
 
   return (
     <section className="relative overflow-hidden">
@@ -52,7 +116,15 @@ export default function Home() {
                 style={{ animationDelay: '180ms' }}
               >
                 <span className="block">{t('hero.titleTop')}</span>
-                <span className="block">{t('hero.titleBottom')}</span>
+                <ScrambleText
+                  as="span"
+                  className="block"
+                  text={titleBottom}
+                  scrambleRanges={titleBottomRanges}
+                  duration={1750}
+                  animation="fade"
+                  locale={i18n.language}
+                />
               </h1>
               <p
                 className="mt-8 max-w-xl text-lg md:text-xl text-text-secondary leading-relaxed opacity-0 animate-fade-up"

@@ -1,9 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { Mail, Github } from 'lucide-react'
 import Button from './Button'
-
-const EMAIL = 'hello@example.com'
-const GITHUB = 'https://github.com'
+import { EMAIL, GITHUB } from '../constants'
 
 // 页脚组件，承接底部行动区与版权信息。
 export default function Footer() {
