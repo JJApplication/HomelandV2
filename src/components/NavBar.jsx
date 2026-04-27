@@ -29,6 +29,7 @@ export default function NavBar() {
     { to: '/', label: t('nav.home') },
     { to: '/projects', label: t('nav.projects') },
     { to: '/blog', label: t('nav.blog') },
+    { to: '/about', label: t('nav.about') },
   ]
 
   const navClass = `fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${

@@ -35,13 +35,75 @@
   },
   "about": {
     "title": "About",
-    "subtitle": "A little about me, my work, and my craft.",
-    "introHeading": "Hi, I'm a developer.",
-    "introBody": "I build thoughtful, minimal digital experiences with a focus on clarity, performance, and joy.",
-    "projectsTitle": "Selected Projects",
-    "projectsSubtitle": "Recent work I'm proud of.",
-    "skillsTitle": "Tech Stack",
-    "skillsSubtitle": "Tools I use daily."
+    "eyebrow": "Profile",
+    "kicker": "A bit of direction",
+    "heroTitle": "Turning technology into something human.",
+    "subtitle": "I use code, structure, and visual rhythm to turn abstract ideas into digital experiences that feel clear, useful, and lasting.",
+    "sideNote": "The same light editorial system continues here, with a calmer page about ambition, motivation, and the kind of work I want to keep building.",
+    "storyLabel": "Ambition",
+    "ambitionTitle": "I want to build more than pages. I want to build digital work that keeps growing.",
+    "ambitionBody": "I care about more than shipping features. I care about how information is understood, whether interactions feel natural, whether the interface has order, and whether a product can continue evolving over time. Every line of code should help a product express itself more clearly and more reliably.",
+    "originLabel": "Why I code",
+    "originBody": "I fell in love with coding because it turns ideas into something real. A thought, a logic flow, or an interface can slowly take shape through building and debugging. That process still keeps me excited.",
+    "visionLabel": "Long-term view",
+    "visionBody": "I want to keep working in the space where design sensitivity meets engineering discipline, building product pages and content systems that are beautiful, maintainable, and genuinely useful.",
+    "ctaLabel": "Let's connect",
+    "ctaTitle": "If you care deeply about your product, I'd love to hear about it.",
+    "principles": {
+      "items": [
+        {
+          "id": "direction",
+          "label": "Principle One",
+          "title": "Direction before decoration",
+          "body": "I prefer to clarify intent, narrative, and hierarchy first, then shape the interface so design strengthens the message."
+        },
+        {
+          "id": "craft",
+          "label": "Principle Two",
+          "title": "Code is part of the craft",
+          "body": "Clear, maintainable, and evolvable implementation directly shapes how stable and efficient a product feels over time."
+        },
+        {
+          "id": "continuity",
+          "label": "Principle Three",
+          "title": "Iteration matters more than a perfect first pass",
+          "body": "I believe in long-term refinement, letting a site gain character through careful updates to its details, pacing, and content."
+        }
+      ]
+    },
+    "links": {
+      "label": "Friendly links",
+      "title": "External resources I use often and gladly recommend.",
+      "subtitle": "These links reflect tools that shape my current workflow, from collaboration and front-end architecture to utility-first styling.",
+      "items": [
+        {
+          "label": "Collaboration",
+          "title": "GitHub",
+          "body": "A place to publish work, study good code, and stay connected to the wider developer community."
+        },
+        {
+          "label": "UI foundation",
+          "title": "React",
+          "body": "I use it to organize components, state, and page structure so interaction stays composable and maintainable."
+        },
+        {
+          "label": "Build workflow",
+          "title": "Vite",
+          "body": "Fast feedback matters. Vite keeps front-end development direct, lightweight, and pleasant to iterate on."
+        },
+        {
+          "label": "Style system",
+          "title": "Tailwind CSS",
+          "body": "It helps me turn spacing, hierarchy, and color decisions into a consistent system that lives directly in the code."
+        }
+      ]
+    },
+    "stack": {
+      "label": "Tech stack",
+      "title": "The tools I use most often in projects.",
+      "subtitle": "They mainly support front-end UI building, component structure, internationalization, and a smooth developer workflow.",
+      "items": ["React", "Vite", "Tailwind CSS", "JavaScript", "React Router", "i18next"]
+    }
   },
   "home": {
     "partnersLabel": "Brands I've worked with",

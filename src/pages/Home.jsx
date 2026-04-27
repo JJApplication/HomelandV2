@@ -222,6 +222,49 @@ export default function Home() {
           </div>
           <span>{t('home.footerNote')}</span>
         </div>
+
+        <section className="py-16 md:py-20">
+          <div className="paper-panel border border-border grid lg:grid-cols-[1.2fr_0.8fr]">
+            <div className="p-8 md:p-12 border-b lg:border-b-0 lg:border-r border-border">
+              <p className="section-label mb-4">{t('cta.letsWork')}</p>
+              <h2 className="display-title text-4xl md:text-6xl leading-[0.95] max-w-xl">
+                {t('cta.yourProject')}
+              </h2>
+              <p className="mt-5 max-w-md text-text-secondary leading-relaxed">
+                {t('footer.description')}
+              </p>
+            </div>
+
+            <div className="p-8 md:p-12 flex flex-col justify-between gap-8">
+              <div className="space-y-3 text-sm text-text-secondary">
+                <p>{t('footer.availability')}</p>
+                <p>{EMAIL}</p>
+              </div>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <Button
+                  as="a"
+                  href={`mailto:${EMAIL}`}
+                  variant="primary"
+                  size="lg"
+                  icon={Mail}
+                >
+                  {t('cta.email')}
+                </Button>
+                <Button
+                  as="a"
+                  href={GITHUB}
+                  target="_blank"
+                  rel="noreferrer"
+                  variant="secondary"
+                  size="lg"
+                  icon={Github}
+                >
+                  {t('cta.github')}
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </section>
   )

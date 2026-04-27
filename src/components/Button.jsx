@@ -2,9 +2,10 @@ import { forwardRef } from 'react'
 
 // 通用按钮组件，统一页面中的交互风格。
 const Button = forwardRef(function Button(
-  { variant = 'primary', size = 'md', icon: Icon, children, className = '', ...props },
+  { as = 'button', variant = 'primary', size = 'md', icon: Icon, children, className = '', ...props },
   ref,
 ) {
+  const Component = as
   const base =
     'inline-flex items-center justify-center gap-2 border border-border font-medium uppercase tracking-[0.14em] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg-primary disabled:opacity-50 disabled:cursor-not-allowed cursor-pointer select-none'
 
@@ -24,14 +25,15 @@ const Button = forwardRef(function Button(
   }
 
   return (
-    <button
+    <Component
       ref={ref}
+      type={Component === 'button' ? props.type ?? 'button' : undefined}
       className={`${base} ${variants[variant]} ${sizes[size]} ${className}`}
       {...props}
     >
       {Icon && <Icon size={size === 'sm' ? 16 : size === 'lg' ? 22 : 18} strokeWidth={2} />}
       {children}
-    </button>
+    </Component>
   )
 })
 
