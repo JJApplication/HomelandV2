@@ -4,28 +4,28 @@
     "projects": "项目",
     "blog": "博客",
     "about": "关于",
-    "marquee": "+++ 正在接收新项目合作 +++"
+    "marquee": "+++ Landers +++"
   },
   "hero": {
     "slogan": "享受生活",
-    "eyebrow": "创意方向",
-    "titleTop": "打造更有识别度的",
-    "titleBottom": "品牌体验。",
-    "subtitle": "首页改为更贴近你设计稿的亮色编辑风布局，用留白、分栏和细边框建立更清晰的秩序感。",
+    "eyebrow": "目标",
+    "titleTop": "在编码中寻找乐趣",
+    "titleBottom": "热爱❤生活",
+    "subtitle": "须知少时凌云志，曾许人间第一流",
     "scrollHint": "继续下滑",
-    "visualLabel": "视觉系统",
-    "visualDescription": "采用浅色纸张质感、工业化网格线和克制的亮绿色点缀，整体气质更接近你的原始设计。",
+    "visualLabel": "专属技能",
+    "visualDescription": "米其林非官方认证厨师🧑‍🍳，非物质文化遗产汉堡🍔研究专家",
     "metricLabel": "项目数量",
-    "metricValue": "12+",
-    "metricDescription": "品牌与产品上线案例",
-    "availability": "目前接受精选合作，包括官网改版、视觉系统整理与产品展示型前端页面。"
+    "metricValue": "10+",
+    "metricDescription": "面向Web, 移动端，桌面端",
+    "availability": "目前正致力于学习Rust以及WebGPU编程🚩"
   },
   "cta": {
     "contact": "联系我",
     "github": "GitHub",
     "email": "邮箱联系",
     "letsWork": "准备开始沟通",
-    "yourProject": "一起推进你的下一个项目。"
+    "yourProject": "任何技术交流欢迎联系。"
   },
   "blog": {
     "title": "博客",
@@ -37,18 +37,16 @@
     "title": "关于",
     "eyebrow": "个人页",
     "kicker": "关于我的方向",
-    "heroTitle": "把技术做成有温度的表达。",
-    "subtitle": "我希望通过代码、结构与视觉，把抽象的想法变成清晰、可用、耐看的数字体验。",
-    "sideNote": "延续整站统一的亮色编辑式结构，用更平静的方式介绍我的志向、初衷与长期想做的事。",
-    "storyLabel": "个人志向",
-    "ambitionTitle": "我想做的不只是页面，而是长期可生长的数字作品。",
-    "ambitionBody": "我在意的不只是功能能否完成，更在意信息如何被理解、交互是否自然、界面是否有秩序，以及产品在时间里是否还能继续迭代。我希望自己写出的每一段代码，都能帮助内容被更好地看见，帮助产品更稳定地表达自身。",
+    "heroTitle": "用心构建项目、让灵感变成现实",
+    "subtitle": "我希望通过代码、结构与视觉，把抽象的想法变成可触摸的数字体验。",
+    "ambitionTitle": "我想做的不只是编码，而是做一件自己喜欢的事。",
+    "ambitionBody": "我在意的不只是功能能否完成，更在意信息如何被理解、交互是否自然、界面是否有秩序，以及产品在时间里是否还能继续迭代。我希望自己写出的每一段代码，都能表达我内心的想法，帮助他人获得更好的体验。",
     "originLabel": "Coding 的初衷",
     "originBody": "最初喜欢写代码，是因为它能把想法迅速落地。一个念头、一段逻辑、一块界面，都可以通过构建和调试逐渐成形。这种从无到有的过程，让我一直保持热情。",
     "visionLabel": "长期愿景",
     "visionBody": "持续打磨设计感与工程能力的交叉地带，去做那些既讲究审美，又讲究可维护性和真实体验的产品页面与内容系统。",
-    "ctaLabel": "欢迎连接",
-    "ctaTitle": "如果你也在认真打磨自己的产品，我们可以聊聊。",
+    "ctaLabel": "感谢访问",
+    "ctaTitle": "须知少时凌云志，曾许人间第一流",
     "principles": {
       "items": [
         {
@@ -73,65 +71,69 @@
     },
     "links": {
       "label": "友好链接",
-      "title": "我常用也愿意推荐的外部资源。",
-      "subtitle": "这些链接分别对应代码协作、界面框架与样式系统，也构成了我当前工作流中很重要的一部分。",
+      "title": "感谢给予我灵感和帮助人。",
+      "subtitle": "🙏",
       "items": [
         {
           "label": "代码协作",
           "title": "GitHub",
-          "body": "记录项目、沉淀代码，也是我持续学习与观察优秀实践的重要入口。"
+          "body": "记录项目、沉淀代码，也是我持续学习与观察优秀实践的重要入口。",
+          "link": "https://github.com"
         },
         {
           "label": "界面基础",
           "title": "React",
-          "body": "我用它组织组件、状态和页面结构，让交互表达更可组合、更容易维护。"
+          "body": "我用它组织组件、状态和页面结构，让交互表达更可组合、更容易维护。",
+          "link": "https://reactjs.org"
         },
         {
-          "label": "构建体验",
-          "title": "Vite",
-          "body": "快速、直接、反馈及时，让前端开发过程保持流畅，也更适合持续打磨体验。"
+          "label": "技能扩展",
+          "title": "Skills",
+          "body": "AI时代，Agent的第二大脑，帮助我更高效地进行工程设计。",
+          "link": "https://skills.sh"
         },
         {
-          "label": "样式系统",
-          "title": "Tailwind CSS",
-          "body": "帮助我更高效地建立统一的间距、层级与色彩节奏，让设计系统真正落到代码里。"
+          "label": "知识社区",
+          "title": "掘金",
+          "body": "一个专业的技术社区，帮助我学习、分享、成长。",
+          "link": "https://juejin.cn"
         }
       ]
     },
     "stack": {
       "label": "技术栈",
       "title": "目前常用的项目技术栈。",
-      "subtitle": "主要围绕前端界面构建、组件组织、多语言支持和工程化体验展开。",
-      "items": ["React", "Vite", "Tailwind CSS", "JavaScript", "React Router", "i18next"]
+      "subtitle": "在学习中不断成长。",
+      "items": ["React", "Golang", "JavaScript", "Rust", "Python"]
     }
   },
   "home": {
-    "partnersLabel": "合作品牌",
-    "statement": "品牌不只是一个 Logo。",
-    "statementBody": "我更关注品牌在页面里的结构感、节奏感和展示方式，让官网像系统而不是简单堆砌的装饰。",
-    "servicesLabel": "服务内容",
-    "footerNote": "亮色编辑型视觉系统",
-    "partners": ["Abstract", "Invision", "Vision Studio", "Circle One"],
+    "partnersLabel": "赞助商",
+    "statement": "你好、我是Landers",
+    "statementBody": "热爱编程、美食、烹饪、电影、电子游戏。 —— 毕业于华中科技大学",
+    "servicesLabel": "自我介绍",
+    "footerNote": "灵感源自Pinterest",
+    "partners": ["Cursor", "Trae", "Claude Code", "OpenRouter"],
     "services": [
       {
-        "title": "品牌策略",
-        "description": "从定位、命名语气到页面表达，帮助产品建立更鲜明的整体方向。",
-        "link": "查看更多"
+        "title": "现在",
+        "description": "服务于半导体产业，提供安全高可用的半导体产业解决方案。",
+        "link": "$$"
       },
       {
-        "title": "品牌设计",
-        "description": "搭建可复用的视觉系统，包括版式规则、字体层级和界面细节。",
-        "link": "查看更多"
+        "title": "2024",
+        "description": "承担计算产品线需求设计工具的需求设计、团队管理和使用推广。",
+        "link": "华为技术有限公司"
       },
       {
-        "title": "平面与内容视觉",
-        "description": "为上线页面、宣传素材和内容模块提供统一且有辨识度的视觉输出。",
-        "link": "查看更多"
+        "title": "2023",
+        "description": "投身网络安全领域，与一流顶尖的安全渗透测试团队合作，提供专业的安全评估与解决方案。",
+        "link": "华为技术有限公司"
       },
       {
-        "title": "持续月度支持",
-        "description": "围绕新栏目、活动页与日常内容更新，持续迭代网站界面与展示效果。",
-        "link": "查看更多"
+        "title": "2020 - 2023",
+        "description": "面向运营商业务，提供运营商管理平台的UI/UX设计与容器化中间件开发。",
+        "link": "华为技术有限公司"
       }
     ]
   },
@@ -150,10 +152,10 @@
     "statLabels": ["资金", "增长", "回报", "合作"]
   },
   "footer": {
-    "copyright": "© 2026 Homeland. 保留所有权利。",
+    "copyright": "© 2026 Renj.io. 保留所有权利。",
     "tagline": "用心构建。",
-    "description": "网站整体已切换为更明亮的设计系统，并朝你的两张参考图靠拢。",
-    "availability": "开放官网设计、前端实现与个人作品站定制合作。"
+    "description": "Talk is cheap, show me the code.",
+    "availability": "用心构建项目、让灵感变成现实。"
   },
   "lang": {
     "en": "English",

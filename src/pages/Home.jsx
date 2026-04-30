@@ -1,9 +1,11 @@
-import { useMemo } from 'react'
+import { useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Mail, Github, ArrowDown, ArrowUpRight } from 'lucide-react'
 import Button from '../components/Button'
+import ChaosPendulum from '../components/ChaosPendulum'
 import ScrambleText from '../components/ScrambleText'
 import { EMAIL, GITHUB } from '../constants'
+import profileImage from '../profile.jpg'
 const TITLE_PUNCTUATION_REGEX = /[.,!?;:，。！？；：、]/u
 
 function findTextRanges(text, tokens) {
@@ -70,6 +72,7 @@ export default function Home() {
   const partners = t('home.partners', { returnObjects: true })
   const services = t('home.services', { returnObjects: true })
   const titleBottom = t('hero.titleBottom')
+  const [isProfileSpotlighted, setIsProfileSpotlighted] = useState(false)
   const titleBottomRanges = useMemo(
     () => resolveTitleScrambleRanges(i18n.language, titleBottom),
     [i18n.language, titleBottom],
@@ -78,16 +81,9 @@ export default function Home() {
   return (
     <section className="relative overflow-hidden">
       <div className="container-content pt-[120px] pb-10">
-        <div className="paper-panel border border-border grid lg:grid-cols-[1.02fr_0.98fr] overflow-hidden">
-          <div className="relative min-h-[420px] md:min-h-[560px] border-b lg:border-b-0 lg:border-r border-border overflow-hidden">
-            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.86),rgba(244,241,234,0.92))]" />
-            <div className="absolute left-8 top-8 h-20 w-20 border border-border-subtle rotate-45 bg-bg-secondary/70" />
-            <div className="absolute left-[10%] top-[18%] h-64 w-40 rounded-[40px] border border-border-subtle bg-white/75 shadow-[0_30px_80px_rgba(17,17,17,0.08)]" />
-            <div className="absolute left-[18%] top-[12%] h-10 w-16 rounded-t-[16px] rounded-b-md bg-lime border border-border-subtle" />
-            <div className="absolute left-[42%] top-[24%] h-56 w-32 rounded-[34px] border border-border-subtle bg-white/70 rotate-[18deg] shadow-[0_20px_60px_rgba(17,17,17,0.08)]" />
-            <div className="absolute left-[53%] top-[17%] h-9 w-14 rounded-t-[14px] rounded-b-md bg-lime border border-border-subtle rotate-[18deg]" />
-            <div className="absolute left-[18%] top-[31%] h-px w-40 bg-border rotate-[38deg]" />
-            <div className="absolute left-[45%] top-[41%] h-px w-28 bg-border rotate-[30deg]" />
+        <div className="paper-panel border border-border grid lg:grid-cols-[0.82fr_1.18fr] overflow-hidden">
+          <div className="relative min-h-[420px] md:min-h-[460px] border-b lg:border-b-0 lg:border-r border-border overflow-hidden">
+            <ChaosPendulum />
             <div className="absolute bottom-0 left-0 right-0 grid grid-cols-2 border-t border-border">
               <div className="p-6 md:p-8 border-r border-border">
                 <p className="section-label mb-3">{t('hero.visualLabel')}</p>
@@ -115,20 +111,20 @@ export default function Home() {
                 className="display-title mt-8 text-5xl sm:text-6xl lg:text-7xl leading-[0.95] opacity-0 animate-fade-up"
                 style={{ animationDelay: '180ms' }}
               >
-                <span className="block">{t('hero.titleTop')}</span>
+                <span className="block mb-4">{t('hero.titleTop')}</span>
                 <ScrambleText
                   as="span"
                   className="block"
                   text={titleBottom}
                   scrambleRanges={titleBottomRanges}
-                  duration={1750}
+                  duration={2000}
                   animation="fade"
                   locale={i18n.language}
                 />
               </h1>
               <p
                 className="mt-8 max-w-xl text-lg md:text-xl text-text-secondary leading-relaxed opacity-0 animate-fade-up"
-                style={{ animationDelay: '320ms' }}
+                style={{ animationDelay: '350ms' }}
               >
                 {t('hero.subtitle')}
               </p>
@@ -154,7 +150,7 @@ export default function Home() {
                 </Button>
               </div>
               <div className="p-6 md:p-8 lg:p-10 border-t md:border-t-0 md:border-l border-border flex items-end">
-                <p className="text-sm text-text-secondary leading-relaxed max-w-[220px]">
+                <p className="text-sm text-text-secondary leading-relaxed max-w-[200px]">
                   {t('hero.availability')}
                 </p>
               </div>
@@ -185,6 +181,44 @@ export default function Home() {
             <p className="mt-6 max-w-xl text-lg text-text-secondary leading-relaxed">
               {t('home.statementBody')}
             </p>
+            <div
+                className="mt-10 opacity-0 animate-fade-up"
+                style={{ animationDelay: '450ms' }}
+              >
+                <button
+                  type="button"
+                  aria-pressed={isProfileSpotlighted}
+                  onClick={() => setIsProfileSpotlighted((value) => !value)}
+                  className="group relative inline-flex cursor-pointer touch-manipulation"
+                >
+                  <span
+                    className={`absolute inset-[-18px] rounded-full bg-[radial-gradient(circle,rgba(255,186,120,0.28)_0%,rgba(255,186,120,0.08)_45%,transparent_72%)] blur-2xl transition duration-300 ease-out ${
+                      isProfileSpotlighted
+                        ? 'scale-110 opacity-100'
+                        : 'opacity-70 group-hover:scale-110 group-hover:opacity-100 group-focus-visible:scale-110 group-focus-visible:opacity-100'
+                    }`}
+                  />
+                  <span
+                    className={`relative flex h-64 w-64 items-center justify-center overflow-hidden rounded-full border bg-[#16120f] p-2 shadow-[0_18px_40px_rgba(17,17,17,0.24)] transition duration-300 ease-out md:h-64 md:w-64 xs:h-48 xs:w-48 ${
+                      isProfileSpotlighted
+                        ? 'scale-110 border-[#f4f1ea] shadow-[0_28px_60px_rgba(17,17,17,0.34)]'
+                        : 'border-border group-hover:scale-110 group-hover:border-[#f4f1ea] group-hover:shadow-[0_28px_60px_rgba(17,17,17,0.34)] group-focus-visible:scale-110 group-focus-visible:border-[#f4f1ea] group-focus-visible:shadow-[0_28px_60px_rgba(17,17,17,0.34)]'
+                    }`}
+                  >
+                    <span className="absolute inset-3 rounded-full border border-white/55" />
+                    <img
+                      src={profileImage}
+                      alt="Landers 个人海报照片"
+                      className={`h-full w-full rounded-full object-cover object-center transition duration-300 ease-out ${
+                        isProfileSpotlighted
+                          ? 'scale-110 saturate-110'
+                          : 'group-hover:scale-150 group-focus-visible:scale-150 group-active:scale-150'
+                      }`}
+                    />
+                    <span className="pointer-events-none absolute inset-0 rounded-full bg-[linear-gradient(145deg,rgba(255,255,255,0.34)_0%,rgba(255,255,255,0.04)_38%,rgba(0,0,0,0.34)_100%)]" />
+                  </span>
+                </button>
+              </div>
           </div>
 
           <div>
@@ -224,10 +258,10 @@ export default function Home() {
         </div>
 
         <section className="py-16 md:py-20">
-          <div className="paper-panel border border-border grid lg:grid-cols-[1.2fr_0.8fr]">
+          <div className="paper-panel border border-border grid lg:grid-cols-[1.28fr_0.72fr]">
             <div className="p-8 md:p-12 border-b lg:border-b-0 lg:border-r border-border">
               <p className="section-label mb-4">{t('cta.letsWork')}</p>
-              <h2 className="display-title text-4xl md:text-6xl leading-[0.95] max-w-xl">
+              <h2 className="display-title text-4xl md:text-6xl leading-[0.95] max-w-2xl">
                 {t('cta.yourProject')}
               </h2>
               <p className="mt-5 max-w-md text-text-secondary leading-relaxed">

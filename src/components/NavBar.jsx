@@ -53,7 +53,7 @@ export default function NavBar() {
             to="/"
             className="flex items-center gap-3 font-semibold text-text-primary hover:text-accent transition-colors"
           >
-            <span className="text-xl tracking-tight lowercase">homeland.</span>
+            <span className="text-xl tracking-tight">Landers1037.</span>
           </NavLink>
 
           <div className="hidden md:flex items-center gap-1">
@@ -98,7 +98,7 @@ export default function NavBar() {
       {mobileOpen && (
         <div className="fixed inset-0 z-50 md:hidden bg-bg-primary animate-fade-in">
           <div className="container-content flex items-center justify-between h-[72px] border-b border-border">
-            <span className="font-semibold tracking-tight lowercase">homeland.</span>
+            <span className="font-semibold tracking-tight">Landers1037.</span>
             <button
               className="p-2 min-w-[44px] min-h-[44px] grid place-items-center text-text-secondary hover:text-text-primary border border-border bg-bg-secondary cursor-pointer"
               onClick={() => setMobileOpen(false)}
