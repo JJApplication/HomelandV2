@@ -4,28 +4,28 @@
     "projects": "Projects",
     "blog": "Blog",
     "about": "About",
-    "marquee": "+++ OPEN FOR NEW PROJECTS +++"
+    "marquee": "+++ Landers +++"
   },
   "hero": {
-    "slogan": "Enjoy your life",
-    "eyebrow": "Creative direction",
-    "titleTop": "Creating",
-    "titleBottom": "unique brands.",
-    "subtitle": "A light editorial homepage for a developer brand, shaped with calm whitespace, structured grids, and a more tactile visual rhythm.",
-    "scrollHint": "Scroll down",
-    "visualLabel": "Visual system",
-    "visualDescription": "Soft industrial layout with bright surfaces, technical borders, and a subtle lime accent inspired by your design draft.",
+    "slogan": "Enjoy life",
+    "eyebrow": "Goals",
+    "titleTop": "Find joy in coding",
+    "titleBottom": "Love ❤ life",
+    "subtitle": "Remember the ambition of youth, once promising to be among the best",
+    "scrollHint": "Keep scrolling",
+    "visualLabel": "Special skills",
+    "visualDescription": "Michelin unofficial certified chef🧑‍🍳, intangible cultural heritage burger🍔 research expert",
     "metricLabel": "Projects",
-    "metricValue": "12+",
-    "metricDescription": "brand and product launches",
-    "availability": "Available for selected collaborations, visual systems, and product-facing front-end work."
+    "metricValue": "10+",
+    "metricDescription": "For Web, mobile, and desktop",
+    "availability": "Currently focused on learning Rust and WebGPU programming🚩"
   },
   "cta": {
-    "contact": "Contact",
+    "contact": "Contact me",
     "github": "GitHub",
-    "email": "Email Me",
-    "letsWork": "Ready to discuss",
-    "yourProject": "Let's work on your next project."
+    "email": "Email",
+    "letsWork": "Ready to talk",
+    "yourProject": "Feel free to reach out for any technical discussions."
   },
   "blog": {
     "title": "Blog",
@@ -36,124 +36,127 @@
   "about": {
     "title": "About",
     "eyebrow": "Profile",
-    "kicker": "A bit of direction",
-    "heroTitle": "Turning technology into something human.",
-    "subtitle": "I use code, structure, and visual rhythm to turn abstract ideas into digital experiences that feel clear, useful, and lasting.",
-    "sideNote": "The same light editorial system continues here, with a calmer page about ambition, motivation, and the kind of work I want to keep building.",
-    "storyLabel": "Ambition",
-    "ambitionTitle": "I want to build more than pages. I want to build digital work that keeps growing.",
-    "ambitionBody": "I care about more than shipping features. I care about how information is understood, whether interactions feel natural, whether the interface has order, and whether a product can continue evolving over time. Every line of code should help a product express itself more clearly and more reliably.",
+    "kicker": "My direction",
+    "heroTitle": "Build projects with heart, turn inspiration into reality",
+    "subtitle": "I hope to transform abstract ideas into tangible digital experiences through code, structure, and visual design.",
+    "ambitionTitle": "I want to do more than just code — I want to do something I love.",
+    "ambitionBody": "I care not just whether a feature works, but how information is understood, whether interactions feel natural, whether the interface has order, and whether a product can continue evolving over time. Every line of code I write should express my thoughts and help others have a better experience.",
     "originLabel": "Why I code",
-    "originBody": "I fell in love with coding because it turns ideas into something real. A thought, a logic flow, or an interface can slowly take shape through building and debugging. That process still keeps me excited.",
-    "visionLabel": "Long-term view",
-    "visionBody": "I want to keep working in the space where design sensitivity meets engineering discipline, building product pages and content systems that are beautiful, maintainable, and genuinely useful.",
-    "ctaLabel": "Let's connect",
-    "ctaTitle": "If you care deeply about your product, I'd love to hear about it.",
+    "originBody": "I first loved coding because it quickly turns ideas into reality. A thought, a logic flow, an interface — all can gradually take shape through building and debugging. That process of creating from nothing has kept my passion alive.",
+    "visionLabel": "Long-term vision",
+    "visionBody": "Keep honing the intersection of design sensibility and engineering capability, creating product pages and content systems that balance aesthetics, maintainability, and genuine user experience.",
+    "ctaLabel": "Thanks for visiting",
+    "ctaTitle": "Remember the ambition of youth, once promising to be among the best",
+    "developedWith": "Developed with ❤️ by GPT-5.4",
     "principles": {
       "items": [
         {
           "id": "direction",
           "label": "Principle One",
           "title": "Direction before decoration",
-          "body": "I prefer to clarify intent, narrative, and hierarchy first, then shape the interface so design strengthens the message."
+          "body": "I prefer to first clarify goals, narrative, and information hierarchy, then decide on interface details, so design serves expression, not the other way around."
         },
         {
           "id": "craft",
           "label": "Principle Two",
-          "title": "Code is part of the craft",
-          "body": "Clear, maintainable, and evolvable implementation directly shapes how stable and efficient a product feels over time."
+          "title": "Code is part of the work",
+          "body": "Maintainable, clear, and evolvable implementation directly affects a product's subsequent iteration efficiency and experience stability."
         },
         {
           "id": "continuity",
           "label": "Principle Three",
-          "title": "Iteration matters more than a perfect first pass",
-          "body": "I believe in long-term refinement, letting a site gain character through careful updates to its details, pacing, and content."
+          "title": "Continuous iteration matters more than one-time completion",
+          "body": "I believe in long-term thinking, letting a website gradually develop its own identity through continuous refinement of details and content rhythm."
         }
       ]
     },
     "links": {
       "label": "Friendly links",
-      "title": "External resources I use often and gladly recommend.",
-      "subtitle": "These links reflect tools that shape my current workflow, from collaboration and front-end architecture to utility-first styling.",
+      "title": "Thanks to those who inspired and helped me.",
+      "subtitle": "🙏",
       "items": [
         {
-          "label": "Collaboration",
+          "label": "Code collaboration",
           "title": "GitHub",
-          "body": "A place to publish work, study good code, and stay connected to the wider developer community."
+          "body": "Recording projects and sharing code is also an important entry point for my continuous learning and observing excellent practices.",
+          "link": "https://github.com"
         },
         {
           "label": "UI foundation",
           "title": "React",
-          "body": "I use it to organize components, state, and page structure so interaction stays composable and maintainable."
+          "body": "I use it to organize components, state, and page structure, making interactions more composable and maintainable.",
+          "link": "https://reactjs.org"
         },
         {
-          "label": "Build workflow",
-          "title": "Vite",
-          "body": "Fast feedback matters. Vite keeps front-end development direct, lightweight, and pleasant to iterate on."
+          "label": "Skills extension",
+          "title": "Skills",
+          "body": "In the AI era, the Agent's second brain helps me design engineering more efficiently.",
+          "link": "https://skills.sh"
         },
         {
-          "label": "Style system",
-          "title": "Tailwind CSS",
-          "body": "It helps me turn spacing, hierarchy, and color decisions into a consistent system that lives directly in the code."
+          "label": "Knowledge community",
+          "title": "Juejin",
+          "body": "A professional tech community that helps me learn, share, and grow.",
+          "link": "https://juejin.cn"
         }
       ]
     },
     "stack": {
       "label": "Tech stack",
-      "title": "The tools I use most often in projects.",
-      "subtitle": "They mainly support front-end UI building, component structure, internationalization, and a smooth developer workflow.",
-      "items": ["React", "Vite", "Tailwind CSS", "JavaScript", "React Router", "i18next"]
+      "title": "Tech stacks I commonly use.",
+      "subtitle": "Growing through learning.",
+      "items": ["React", "Golang", "JavaScript", "Rust", "Python"]
     }
   },
   "home": {
-    "partnersLabel": "Brands I've worked with",
-    "statement": "A brand is not just a logo.",
-    "statementBody": "I shape clean interfaces, launch pages, and product presentations that feel more like systems than decoration.",
-    "servicesLabel": "Services",
-    "footerNote": "Light mode editorial system",
-    "partners": ["Abstract", "Invision", "Vision Studio", "Circle One"],
+    "partnersLabel": "Sponsors",
+    "statement": "Hello, I'm Landers",
+    "statementBody": "Passionate about programming, food, cooking, movies, video games. — Graduate of Huazhong University of Science and Technology",
+    "servicesLabel": "About me",
+    "footerNote": "Inspiration from Pinterest",
+    "partners": ["Cursor", "Trae", "Claude Code", "OpenRouter"],
     "services": [
       {
-        "title": "Brand Strategy",
-        "description": "Positioning, naming cues, and interface direction aligned to a sharper product voice.",
-        "link": "More information"
+        "title": "Now",
+        "description": "Serving the semiconductor industry, providing secure and highly available semiconductor industry solutions.",
+        "link": "$$"
       },
       {
-        "title": "Brand Design",
-        "description": "A modular visual system with layout rules, type hierarchy, and tactile UI details.",
-        "link": "More information"
+        "title": "2024",
+        "description": "Responsible for requirement design, team management, and adoption promotion for computing product line design tools.",
+        "link": "Huawei Technologies"
       },
       {
-        "title": "Graphic Design",
-        "description": "Key visuals, launch graphics, and content assets that stay consistent across product surfaces.",
-        "link": "More information"
+        "title": "2023",
+        "description": "Dived into the cybersecurity field, collaborating with top security penetration testing teams to provide professional security assessments and solutions.",
+        "link": "Huawei Technologies"
       },
       {
-        "title": "Monthly Support",
-        "description": "Long-term UI iteration for new sections, campaigns, and content refreshes.",
-        "link": "More information"
+        "title": "2020 - 2023",
+        "description": "For telecom business, providing UI/UX design for operator management platforms and containerized middleware development.",
+        "link": "Huawei Technologies"
       }
     ]
   },
   "projects": {
     "eyebrow": "Portfolio",
     "applyNow": "Apply now",
-    "sideLabel": "Incubation studio",
-    "sideBody": "Meet our recent incubations and structured launch materials.",
-    "countLabel": "Projects",
+    "sideLabel": "Project incubation",
+    "sideBody": "Refer to the second design draft, changed to a brighter project display structure more like a portfolio archive page.",
+    "countLabel": "Project count",
     "filters": ["All", "Incubation", "Acceleration", "Investment"],
     "searchPlaceholder": "Search",
-    "footerLabel": "Ready to discuss",
-    "footerTitle": "Your product launch?",
+    "footerLabel": "Ready to connect",
+    "footerTitle": "Is your product ready to launch?",
     "primaryAction": "Apply for incubation",
     "secondaryAction": "Apply for funding",
     "statLabels": ["Funds", "Growth", "ROI", "Partners"]
   },
   "footer": {
-    "copyright": "© 2026 Homeland. All rights reserved.",
-    "tagline": "Built with care.",
-    "description": "A clearer, brighter website system aligned with your design references and ready for future content.",
-    "availability": "Open for web design, front-end implementation, and portfolio customization."
+    "copyright": "© 2026 Renj.io. All rights reserved.",
+    "tagline": "Built with heart.",
+    "description": "Talk is cheap, show me the code.",
+    "availability": "Build projects with heart, turn inspiration into reality."
   },
   "lang": {
     "en": "English",

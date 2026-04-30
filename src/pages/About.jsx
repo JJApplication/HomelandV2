@@ -120,7 +120,7 @@ export default function About() {
 
         <div className="px-6 py-8 md:px-10 md:py-10 text-center">
           <p className="text-sm uppercase tracking-[0.18em] text-text-muted">
-            在与GPT-5.4的合作下开发❤
+            {t('about.developedWith')}
           </p>
         </div>
       </div>
