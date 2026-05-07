@@ -74,6 +74,7 @@ export default function Home() {
   const services = t('home.services', { returnObjects: true })
   const titleBottom = t('hero.titleBottom')
   const [isProfileSpotlighted, setIsProfileSpotlighted] = useState(false)
+  const timelineItems = t('home.timeline', { returnObjects: true })
   const titleBottomRanges = useMemo(
     () => resolveTitleScrambleRanges(i18n.language, titleBottom),
     [i18n.language, titleBottom],
@@ -283,7 +284,41 @@ export default function Home() {
           </span>
         </div>
 
-        <section className="py-16 md:py-20">
+        <section className="py-6 md:py-10">
+          <div className="paper-panel border border-border p-8 md:p-12 lg:p-14">
+            <div className="flex items-center gap-3 mb-2">
+              <span className="section-label">{t('home.timelineLabel')}</span>
+              <span className="h-px flex-1 bg-border" />
+              <span className="text-xs tracking-[0.18em] text-text-secondary uppercase">{t('home.timelineSublabel')}</span>
+            </div>
+
+            <div className="relative mt-14 pb-2">
+              <div className="absolute left-0 right-0 top-[7px] h-px bg-border hidden lg:block" />
+
+              <div className="relative grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-x-4 gap-y-8 sm:gap-y-10">
+                {timelineItems.map((item, index) => (
+                  <div
+                    key={item.date + item.text}
+                    className="flex flex-col items-center text-center group"
+                  >
+                    <div className="w-[14px] h-[14px] rounded-full bg-accent border-[3px] border-bg-primary shadow-[0_0_0_1px_rgba(255,106,26,0.25)] z-10 transition-transform duration-300 ease-out group-hover:scale-125 group-hover:shadow-[0_0_0_3px_rgba(255,106,26,0.35)]" />
+                    <div className="w-px h-5 bg-gradient-to-b from-accent/25 to-transparent" />
+                    <div className="pt-2 px-1">
+                      <p className="text-sm md:text-base font-medium text-text-primary leading-snug">
+                        {item.text}
+                      </p>
+                      <p className="mt-1.5 text-xs tracking-[0.12em] text-text-secondary">
+                        {item.date}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="py-6 md:py-10">
           <div className="paper-panel border border-border grid lg:grid-cols-[1.28fr_0.72fr]">
             <div className="p-8 md:p-12 border-b lg:border-b-0 lg:border-r border-border">
               <p className="section-label mb-4">{t('cta.letsWork')}</p>

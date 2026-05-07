@@ -117,6 +117,16 @@
     "missionOriginal": "What is our goal? The stars and the sea?",
     "missionTransformed": "Our goal: think independently, do what we love, and realize our worth",
     "missionLabel": "Aim higher",
+    "timelineLabel": "Timeline",
+    "timelineSublabel": "Journey",
+    "timeline": [
+      { "date": "2017-09-01", "text": "Wordpress - first site" },
+      { "date": "2018", "text": "Register domain lrenj.top" },
+      { "date": "2019", "text": "Write site with Flask" },
+      { "date": "2020", "text": "Register domain renj.io" },
+      { "date": "2020", "text": "Switch tech stack to go & react" },
+      { "date": "2026", "text": "Rebuild with GPT-5" }
+    ],
     "partners": ["Cursor", "Trae", "Claude Code", "OpenRouter"],
     "services": [
       {

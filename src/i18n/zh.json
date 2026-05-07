@@ -117,6 +117,16 @@
     "missionOriginal": "我们的目标是什么？ 星辰大海？",
     "missionTransformed": "我们的目标：独立思考，做自己喜欢的事情，实现自我价值",
     "missionLabel": "做到更好",
+    "timelineLabel": "时间线",
+    "timelineSublabel": "旅程",
+    "timeline": [
+      { "date": "2017-09-01", "text": "Wordpress - 第一个网站" },
+      { "date": "2018", "text": "注册域名 lrenj.top" },
+      { "date": "2019", "text": "用 Flask 搭建网站" },
+      { "date": "2020", "text": "注册域名 renj.io" },
+      { "date": "2020", "text": "技术栈切换到 Go & React" },
+      { "date": "2026", "text": "用 GPT-5 重构" }
+    ],
     "partners": ["Cursor", "Trae", "Claude Code", "OpenRouter"],
     "services": [
       {

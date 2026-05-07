@@ -117,6 +117,16 @@
     "missionOriginal": "私たちの目標は？ 星辰大海？",
     "missionTransformed": "私たちの目標：自立して考え、好きなことをし、自己価値を実現する",
     "missionLabel": "より良く",
+    "timelineLabel": "タイムライン",
+    "timelineSublabel": "歩み",
+    "timeline": [
+      { "date": "2017-09-01", "text": "Wordpress - 初めてのサイト" },
+      { "date": "2018", "text": "ドメイン lrenj.top を登録" },
+      { "date": "2019", "text": "Flask でサイトを構築" },
+      { "date": "2020", "text": "ドメイン renj.io を登録" },
+      { "date": "2020", "text": "技術スタックを Go & React に移行" },
+      { "date": "2026", "text": "GPT-5 で再構築" }
+    ],
     "partners": ["Cursor", "Trae", "Claude Code", "OpenRouter"],
     "services": [
       {
