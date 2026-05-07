@@ -4,6 +4,7 @@ import { Mail, Github, ArrowDown, ArrowUpRight } from 'lucide-react'
 import Button from '../components/Button'
 import ChaosPendulum from '../components/ChaosPendulum'
 import ScrambleText from '../components/ScrambleText'
+import FoilRevealText from '../components/FoilRevealText'
 import { EMAIL, GITHUB } from '../constants'
 import profileImage from '../profile.jpg'
 const TITLE_PUNCTUATION_REGEX = /[.,!?;:，。！？；：、]/u
@@ -167,7 +168,10 @@ export default function Home() {
               key={partner}
               className="px-6 py-5 border-b md:border-b-0 md:border-r last:border-r-0 border-border text-center text-sm uppercase tracking-[0.18em] text-text-secondary"
             >
-              {partner}
+              <FoilRevealText
+                originalText={partner}
+                transformedText={partner}
+              />
             </div>
           ))}
         </div>
@@ -255,6 +259,28 @@ export default function Home() {
             <span>{t('hero.scrollHint')}</span>
           </div>
           <span>{t('home.footerNote')}</span>
+        </div>
+
+        <div className="paper-panel mt-8 border border-border px-6 py-8 md:px-10 md:py-7 text-sm md:text-base tracking-[0.12em] text-text-secondary leading-relaxed cursor-pointer">
+          <FoilRevealText
+            originalText={t('home.missionOriginal')}
+            transformedText={t('home.missionTransformed')}
+          />
+        </div>
+
+        <div className="paper-panel border-x border-b border-border grid grid-cols-[30%_70%] text-sm tracking-[0.12em] text-text-secondary">
+          <span className="px-6 py-2 border-r border-border text-xs">{t('home.missionLabel')}</span>
+          <span className="px-6 py-2 flex items-center justify-center gap-1.5">
+            {[0, 1, 2].map((i) => (
+              <span
+                key={i}
+                className="inline-block will-change-transform animate-scale-wave"
+                style={{ animationDelay: `${i * 0.4}s` }}
+              >
+                🥇
+              </span>
+            ))}
+          </span>
         </div>
 
         <section className="py-16 md:py-20">

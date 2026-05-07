@@ -114,6 +114,9 @@
     "statementBody": "Passionate about programming, food, cooking, movies, video games. — Graduate of Huazhong University of Science and Technology",
     "servicesLabel": "About me",
     "footerNote": "Inspiration from Pinterest",
+    "missionOriginal": "What is our goal? The stars and the sea?",
+    "missionTransformed": "Our goal: think independently, do what we love, and realize our worth",
+    "missionLabel": "Aim higher",
     "partners": ["Cursor", "Trae", "Claude Code", "OpenRouter"],
     "services": [
       {

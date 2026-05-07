@@ -114,6 +114,9 @@
     "statementBody": "热爱编程、美食、烹饪、电影、电子游戏。 —— 毕业于华中科技大学",
     "servicesLabel": "自我介绍",
     "footerNote": "灵感源自Pinterest",
+    "missionOriginal": "我们的目标是什么？ 星辰大海？",
+    "missionTransformed": "我们的目标：独立思考，做自己喜欢的事情，实现自我价值",
+    "missionLabel": "做到更好",
     "partners": ["Cursor", "Trae", "Claude Code", "OpenRouter"],
     "services": [
       {
