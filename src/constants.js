@@ -1,6 +1,8 @@
 export const EMAIL = 'mail@renj.io'
 export const GITHUB = 'https://github.com/Landers1037'
 export const BLOG = 'https://blog.renj.io'
+export const ORGANIZATION = 'https://github.com/JJApplication'
+export const SUPPORT = 'https://github.com/landers1037'
 
 export const FRIENDLY_LINKS = [
   { id: 'github', href: GITHUB },

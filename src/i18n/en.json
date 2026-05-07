@@ -13,7 +13,7 @@
     "titleBottom": "Love ❤ life",
     "subtitle": "Remember the ambition of youth, once promising to be among the best",
     "scrollHint": "Keep scrolling",
-    "visualLabel": "Special skills",
+    "visualLabel": "Signature skills",
     "visualDescription": "Michelin unofficial certified chef🧑‍🍳, intangible cultural heritage burger🍔 research expert",
     "metricLabel": "Projects",
     "metricValue": "10+",
@@ -24,7 +24,7 @@
     "contact": "Contact me",
     "github": "GitHub",
     "email": "Email",
-    "letsWork": "Ready to talk",
+    "letsWork": "Ready to connect",
     "yourProject": "Feel free to reach out for any technical discussions."
   },
   "blog": {
@@ -47,7 +47,7 @@
     "visionBody": "Keep honing the intersection of design sensibility and engineering capability, creating product pages and content systems that balance aesthetics, maintainability, and genuine user experience.",
     "ctaLabel": "Thanks for visiting",
     "ctaTitle": "Remember the ambition of youth, once promising to be among the best",
-    "developedWith": "Developed with ❤️ by GPT-5.4",
+    "developedWith": "Developed in collaboration with GPT-5.4 ❤",
     "principles": {
       "items": [
         {
@@ -139,18 +139,14 @@
     ]
   },
   "projects": {
-    "eyebrow": "Portfolio",
-    "applyNow": "Apply now",
-    "sideLabel": "Project incubation",
-    "sideBody": "Refer to the second design draft, changed to a brighter project display structure more like a portfolio archive page.",
-    "countLabel": "Project count",
-    "filters": ["All", "Incubation", "Acceleration", "Investment"],
+    "filters": ["Depth", "Reflection", "Iteration"],
     "searchPlaceholder": "Search",
-    "footerLabel": "Ready to connect",
+    "footerLabel": "Build great products with care",
     "footerTitle": "Is your product ready to launch?",
-    "primaryAction": "Apply for incubation",
-    "secondaryAction": "Apply for funding",
-    "statLabels": ["Funds", "Growth", "ROI", "Partners"]
+    "primaryAction": "Organization",
+    "secondaryAction": "Request support",
+    "statLabels": ["Language", "Stars", "Fork"],
+    "openProjectLink": "Visit {{name}} (opens in new tab)"
   },
   "footer": {
     "copyright": "© 2026 Renj.io. All rights reserved.",

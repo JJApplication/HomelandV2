@@ -139,18 +139,14 @@
     ]
   },
   "projects": {
-    "eyebrow": "作品页",
-    "applyNow": "立即申请",
-    "sideLabel": "项目孵化",
-    "sideBody": "参考第二张设计稿，改成更像作品归档页的亮色项目展示结构。",
-    "countLabel": "项目数",
-    "filters": ["全部", "孵化", "加速", "投资"],
+    "filters": ["沉淀", "思考", "迭代"],
     "searchPlaceholder": "搜索",
-    "footerLabel": "准备好沟通",
+    "footerLabel": "用心做出好的产品",
     "footerTitle": "你的产品准备启动了吗？",
-    "primaryAction": "申请孵化",
-    "secondaryAction": "申请资金支持",
-    "statLabels": ["资金", "增长", "回报", "合作"]
+    "primaryAction": "组织",
+    "secondaryAction": "申请支持",
+    "statLabels": ["语言", "星标", "Fork"],
+    "openProjectLink": "访问 {{name}}（新标签页打开）"
   },
   "footer": {
     "copyright": "© 2026 Renj.io. 保留所有权利。",
