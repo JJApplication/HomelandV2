@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useMemo, useRef, useState, useCallback } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Mail, Github, ArrowDown, ArrowUpRight } from 'lucide-react'
 import Button from '../components/Button'
@@ -80,10 +80,40 @@ export default function Home() {
     [i18n.language, titleBottom],
   )
 
+  const profileRef = useRef(null)
+  const [tiltStyle, setTiltStyle] = useState({})
+  const TILT_MAX = 40
+
+  const handleProfileMouseMove = useCallback((e) => {
+    const el = profileRef.current
+    if (!el || isProfileSpotlighted) return
+
+    const rect = el.getBoundingClientRect()
+    const x = e.clientX - rect.left
+    const y = e.clientY - rect.top
+    const centerX = rect.width / 2
+    const centerY = rect.height / 2
+
+    const rotateY = ((x - centerX) / centerX) * TILT_MAX
+    const rotateX = ((centerY - y) / centerY) * TILT_MAX
+
+    setTiltStyle({
+      transform: `perspective(600px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`,
+    })
+  }, [isProfileSpotlighted])
+
+  const handleProfileMouseLeave = useCallback(() => {
+    setTiltStyle({
+      transform: 'perspective(600px) rotateX(0deg) rotateY(0deg)',
+    })
+  }, [])
+
   return (
     <section className="relative overflow-hidden">
       <div className="container-content pt-[120px] pb-10">
-        <div className="paper-panel border border-border grid lg:grid-cols-[0.82fr_1.18fr] overflow-hidden">
+        <div className="paper-panel border border-border grid lg:grid-cols-[0.82fr_1.18fr] overflow-hidden opacity-0 animate-fade-up"
+    style={{ animationDelay: '0ms' }}
+  >
           <div className="relative min-h-[420px] md:min-h-[460px] border-b lg:border-b-0 lg:border-r border-border overflow-hidden">
             <ChaosPendulum />
             <div className="absolute bottom-0 left-0 right-0 grid grid-cols-2 border-t border-border">
@@ -160,7 +190,9 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="paper-panel mt-0 border-x border-b border-border grid md:grid-cols-[1.2fr_repeat(4,1fr)]">
+        <div className="paper-panel mt-0 border-x border-b border-border grid md:grid-cols-[1.2fr_repeat(4,1fr)] opacity-0 animate-fade-up"
+          style={{ animationDelay: '100ms' }}
+        >
           <div className="px-6 py-5 border-b md:border-b-0 md:border-r border-border">
             <p className="section-label">{t('home.partnersLabel')}</p>
           </div>
@@ -177,7 +209,9 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="paper-panel mt-8 border border-border grid lg:grid-cols-[1fr_1.05fr] overflow-hidden">
+        <div className="paper-panel mt-8 border border-border grid lg:grid-cols-[1fr_1.05fr] overflow-hidden opacity-0 animate-fade-up"
+          style={{ animationDelay: '200ms' }}
+        >
           <div className="p-8 md:p-12 lg:p-14 border-b lg:border-b-0 lg:border-r border-border">
             <p className="section-label">{t('home.servicesLabel')}</p>
             <h2 className="display-title mt-5 text-4xl md:text-6xl leading-[0.98] max-w-lg">
@@ -192,35 +226,51 @@ export default function Home() {
               >
                 <button
                   type="button"
+                  ref={profileRef}
                   aria-pressed={isProfileSpotlighted}
+                  onMouseMove={handleProfileMouseMove}
+                  onMouseLeave={handleProfileMouseLeave}
                   onClick={() => setIsProfileSpotlighted((value) => !value)}
                   className="group relative inline-flex cursor-pointer touch-manipulation"
                 >
                   <span
-                    className={`absolute inset-[-18px] rounded-full bg-[radial-gradient(circle,rgba(255,186,120,0.28)_0%,rgba(255,186,120,0.08)_45%,transparent_72%)] blur-2xl transition duration-300 ease-out ${
+                    className={`absolute inset-[-24px] rounded-full transition-all duration-700 ease-out ${
                       isProfileSpotlighted
-                        ? 'scale-110 opacity-100'
-                        : 'opacity-70 group-hover:scale-110 group-hover:opacity-100 group-focus-visible:scale-110 group-focus-visible:opacity-100'
+                        ? 'scale-125 opacity-100'
+                        : 'opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100'
                     }`}
+                    style={{
+                      background: isProfileSpotlighted
+                        ? 'radial-gradient(circle at 50% 50%, rgba(255,186,120,0.35) 0%, rgba(255,186,120,0.10) 40%, rgba(212,175,55,0.06) 65%, transparent 80%)'
+                        : 'radial-gradient(circle at 50% 50%, rgba(255,186,120,0.28) 0%, rgba(255,186,120,0.08) 45%, transparent 72%)',
+                    }}
                   />
+                  <span className="absolute inset-[-6px] rounded-full opacity-0 transition-opacity duration-700 ease-out bg-[radial-gradient(circle,color-mix(in srgb,var(--accent,#FF6A1A)_12%,transparent)_0%,transparent_70%)] blur-xl group-hover:opacity-100 group-focus-visible:opacity-100" />
                   <span
-                    className={`relative flex h-64 w-64 items-center justify-center overflow-hidden rounded-full border bg-[#16120f] p-2 shadow-[0_18px_40px_rgba(17,17,17,0.24)] transition duration-300 ease-out md:h-64 md:w-64 xs:h-48 xs:w-48 ${
+                    className={`relative flex h-64 w-64 items-center justify-center overflow-hidden rounded-full border bg-[#16120f] p-2 shadow-[0_18px_40px_rgba(17,17,17,0.24)] transition-all duration-500 ease-out will-change-transform xs:h-48 xs:w-48 md:h-64 md:w-64 ${
                       isProfileSpotlighted
                         ? 'scale-110 border-[#f4f1ea] shadow-[0_28px_60px_rgba(17,17,17,0.34)]'
-                        : 'border-border group-hover:scale-110 group-hover:border-[#f4f1ea] group-hover:shadow-[0_28px_60px_rgba(17,17,17,0.34)] group-focus-visible:scale-110 group-focus-visible:border-[#f4f1ea] group-focus-visible:shadow-[0_28px_60px_rgba(17,17,17,0.34)]'
+                        : 'border-border group-hover:scale-105 group-hover:border-[#e8e0d0] group-hover:shadow-[0_28px_60px_rgba(17,17,17,0.34)] group-focus-visible:scale-105 group-focus-visible:border-[#e8e0d0] group-focus-visible:shadow-[0_28px_60px_rgba(17,17,17,0.34)]'
                     }`}
+                    style={tiltStyle}
                   >
-                    <span className="absolute inset-3 rounded-full border border-white/55" />
+                    <span className={`absolute inset-3 rounded-full border transition-all duration-500 ease-out ${
+                      isProfileSpotlighted
+                        ? 'border-white/70 scale-110'
+                        : 'border-white/55 group-hover:border-white/70 group-hover:scale-105'
+                    }`} />
                     <img
                       src={profileImage}
                       alt="Landers 个人海报照片"
-                      className={`h-full w-full rounded-full object-cover object-center transition duration-300 ease-out ${
+                      className={`h-full w-full rounded-full object-cover object-center transition-all duration-700 ease-out ${
                         isProfileSpotlighted
-                          ? 'scale-110 saturate-110'
-                          : 'group-hover:scale-150 group-focus-visible:scale-150 group-active:scale-150'
+                          ? 'scale-125 saturate-110 brightness-110'
+                          : 'group-hover:scale-110 group-focus-visible:scale-110'
                       }`}
                     />
-                    <span className="pointer-events-none absolute inset-0 rounded-full bg-[linear-gradient(145deg,rgba(255,255,255,0.34)_0%,rgba(255,255,255,0.04)_38%,rgba(0,0,0,0.34)_100%)]" />
+                    <span className={`pointer-events-none absolute inset-0 rounded-full bg-[linear-gradient(145deg,rgba(255,255,255,0.34)_0%,rgba(255,255,255,0.04)_38%,rgba(0,0,0,0.34)_100%)] transition-opacity duration-500 ease-out ${
+                      isProfileSpotlighted ? 'opacity-80' : 'opacity-100'
+                    }`} />
                   </span>
                 </button>
               </div>
@@ -230,9 +280,10 @@ export default function Home() {
             {services.map((service, index) => (
               <article
                 key={service.title}
-                className={`grid md:grid-cols-[88px_1fr] gap-6 p-8 md:p-10 ${
+                className={`grid md:grid-cols-[88px_1fr] gap-6 p-8 md:p-10 opacity-0 animate-fade-up ${
                   index !== services.length - 1 ? 'border-b border-border' : ''
                 }`}
+                style={{ animationDelay: `${300 + index * 120}ms` }}
               >
                 <div className="flex items-start md:justify-center">
                   <div className="mt-1 h-12 w-12 rotate-45 border border-border-subtle bg-bg-tertiary/80" />
@@ -254,7 +305,9 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="paper-panel border-x border-b border-border px-6 py-4 flex items-center justify-between text-xs uppercase tracking-[0.18em] text-text-secondary">
+        <div className="paper-panel border-x border-b border-border px-6 py-4 flex items-center justify-between text-xs uppercase tracking-[0.18em] text-text-secondary opacity-0 animate-fade-up"
+          style={{ animationDelay: '400ms' }}
+        >
           <div className="flex items-center gap-3">
             <ArrowDown size={16} />
             <span>{t('hero.scrollHint')}</span>
@@ -262,15 +315,19 @@ export default function Home() {
           <span>{t('home.footerNote')}</span>
         </div>
 
-        <div className="paper-panel mt-8 border border-border px-6 py-8 md:px-10 md:py-7 text-sm md:text-base tracking-[0.12em] text-text-secondary leading-relaxed cursor-pointer">
+        <div className="paper-panel mt-8 border border-border px-6 py-10 md:px-10 md:py-10 text-sm md:text-base tracking-[0.12em] text-text-secondary leading-relaxed cursor-pointer opacity-0 animate-fade-up"
+          style={{ animationDelay: '500ms' }}
+        >
           <FoilRevealText
             originalText={t('home.missionOriginal')}
             transformedText={t('home.missionTransformed')}
           />
         </div>
 
-        <div className="paper-panel border-x border-b border-border grid grid-cols-[30%_70%] text-sm tracking-[0.12em] text-text-secondary">
-          <span className="px-6 py-2 border-r border-border text-xs">{t('home.missionLabel')}</span>
+        <div className="paper-panel border-x border-b border-border grid grid-cols-[30%_70%] text-sm tracking-[0.12em] text-text-secondary opacity-0 animate-fade-up"
+          style={{ animationDelay: '600ms' }}
+        >
+          <span className="px-6 py-4 border-r border-border text-xs">{t('home.missionLabel')}</span>
           <span className="px-6 py-2 flex items-center justify-center gap-1.5">
             {[0, 1, 2].map((i) => (
               <span
@@ -285,7 +342,9 @@ export default function Home() {
         </div>
 
         <section className="py-6 md:py-10">
-          <div className="paper-panel border border-border p-8 md:p-12 lg:p-14">
+          <div className="paper-panel border border-border p-8 md:p-12 lg:p-14 opacity-0 animate-fade-up"
+              style={{ animationDelay: '700ms' }}
+            >
             <div className="flex items-center gap-3 mb-2">
               <span className="section-label">{t('home.timelineLabel')}</span>
               <span className="h-px flex-1 bg-border" />
@@ -299,7 +358,8 @@ export default function Home() {
                 {timelineItems.map((item, index) => (
                   <div
                     key={item.date + item.text}
-                    className="flex flex-col items-center text-center group"
+                    className="flex flex-col items-center text-center group opacity-0 animate-fade-up"
+                    style={{ animationDelay: `${800 + index * 100}ms` }}
                   >
                     <div className="w-[14px] h-[14px] rounded-full bg-accent border-[3px] border-bg-primary shadow-[0_0_0_1px_rgba(255,106,26,0.25)] z-10 transition-transform duration-300 ease-out group-hover:scale-125 group-hover:shadow-[0_0_0_3px_rgba(255,106,26,0.35)]" />
                     <div className="w-px h-5 bg-gradient-to-b from-accent/25 to-transparent" />
@@ -319,7 +379,9 @@ export default function Home() {
         </section>
 
         <section className="py-6 md:py-10">
-          <div className="paper-panel border border-border grid lg:grid-cols-[1.28fr_0.72fr]">
+          <div className="paper-panel border border-border grid lg:grid-cols-[1.28fr_0.72fr] opacity-0 animate-fade-up"
+              style={{ animationDelay: '800ms' }}
+            >
             <div className="p-8 md:p-12 border-b lg:border-b-0 lg:border-r border-border">
               <p className="section-label mb-4">{t('cta.letsWork')}</p>
               <h2 className="display-title text-4xl md:text-6xl leading-[0.95] max-w-2xl">
