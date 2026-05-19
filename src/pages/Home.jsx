@@ -6,8 +6,46 @@ import ChaosPendulum from '../components/ChaosPendulum'
 import ScrambleText from '../components/ScrambleText'
 import FoilRevealText from '../components/FoilRevealText'
 import { EMAIL, GITHUB } from '../constants'
+import pixelCareerIcon from '../assets/pixel-career.svg'
+import pixelCodeProjectIcon from '../assets/pixel-code-project.svg'
+import pixelGoalIcon from '../assets/pixel-goal.svg'
+import pixelJourneyIcon from '../assets/pixel-journey.svg'
+import pixelStarsSeaIcon from '../assets/pixel-stars-sea.svg'
+import work1 from '../assets/s_1.png'
+import work2 from '../assets/s_2.png'
+import work3 from '../assets/s_3.png'
+import work4 from '../assets/s_4.png'
+import timeline1 from '../assets/t1.png'
+import timeline2 from '../assets/t2.png'
+import timeline3 from '../assets/t3.png'
+import timeline4 from '../assets/t4.png'
+import timeline5 from '../assets/t5.png'
+import timeline6 from '../assets/t6.png'
 import profileImage from '../profile.jpg'
+
+// 工作经历图标，顺序对应 services 数组（现在、2024、2023、2020-2023）
+const workIcons = [
+  { src: work4, alt: '半导体产业' },
+  { src: work3, alt: '设计工具产品管理' },
+  { src: work2, alt: '网络安全' },
+  { src: work1, alt: '运营商UI全栈' },
+]
 const TITLE_PUNCTUATION_REGEX = /[.,!?;:，。！？；：、]/u
+
+const missionIcons = [
+  { src: pixelGoalIcon, alt: '目标像素图标' },
+  { src: pixelStarsSeaIcon, alt: '星辰大海像素图标' },
+  { src: pixelCodeProjectIcon, alt: '代码项目像素图标' },
+]
+
+const timelineIcons = [
+  { src: timeline1, alt: '旅程像素图标' },
+  { src: timeline2, alt: '工作经历像素图标' },
+  { src: timeline3, alt: '代码项目像素图标' },
+  { src: timeline4, alt: '星辰大海像素图标' },
+  { src: timeline5, alt: '代码项目像素图标' },
+  { src: timeline6, alt: '目标像素图标' },
+]
 
 function findTextRanges(text, tokens) {
   const characters = Array.from(text)
@@ -277,16 +315,24 @@ export default function Home() {
           </div>
 
           <div>
-            {services.map((service, index) => (
+            {services.map((service, index) => {
+              const wIcon = workIcons[index % workIcons.length]
+              return (
               <article
                 key={service.title}
-                className={`grid md:grid-cols-[88px_1fr] gap-6 p-8 md:p-10 opacity-0 animate-fade-up ${
+                className={`grid md:grid-cols-[128px_1fr] gap-6 p-8 md:p-10 opacity-0 animate-fade-up ${
                   index !== services.length - 1 ? 'border-b border-border' : ''
                 }`}
                 style={{ animationDelay: `${300 + index * 120}ms` }}
               >
                 <div className="flex items-start md:justify-center">
-                  <div className="mt-1 h-12 w-12 rotate-45 border border-border-subtle bg-bg-tertiary/80" />
+                  <div className="mt-1 flex h-32 w-32 items-center justify-center transition-all duration-300 ease-out hover:-translate-y-1">
+                    <img
+                      src={wIcon.src}
+                      alt={wIcon.alt}
+                      className="h-full w-full object-contain [image-rendering:pixelated]"
+                    />
+                  </div>
                 </div>
                 <div>
                   <div className="flex items-start justify-between gap-4">
@@ -301,7 +347,8 @@ export default function Home() {
                   </p>
                 </div>
               </article>
-            ))}
+              )
+            })}
           </div>
         </div>
 
@@ -315,28 +362,39 @@ export default function Home() {
           <span>{t('home.footerNote')}</span>
         </div>
 
-        <div className="paper-panel mt-8 border border-border px-6 py-10 md:px-10 md:py-10 text-sm md:text-base tracking-[0.12em] text-text-secondary leading-relaxed cursor-pointer opacity-0 animate-fade-up"
+        <div className="paper-panel mt-8 border border-border px-6 py-8 md:px-10 md:py-10 cursor-pointer opacity-0 animate-fade-up"
           style={{ animationDelay: '500ms' }}
         >
-          <FoilRevealText
-            originalText={t('home.missionOriginal')}
-            transformedText={t('home.missionTransformed')}
-          />
+          <div className="grid gap-6 md:grid-cols-[72px_1fr_72px] md:items-center">
+            <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-2xl bg-bg-tertiary/100 p-2 shadow-[0_10px_24px_rgba(17,17,17,0.20)] transition-transform duration-300 ease-out hover:-translate-y-1">
+              <img
+                src={pixelStarsSeaIcon}
+                alt="icon"
+                className="h-full w-full object-contain [image-rendering:pixelated]"
+              />
+            </div>
+            <div className="text-sm md:text-base tracking-[0.12em] text-text-secondary leading-relaxed text-center md:text-left">
+              <FoilRevealText
+                originalText={t('home.missionOriginal')}
+                transformedText={t('home.missionTransformed')}
+              />
+            </div>
+          </div>
         </div>
 
         <div className="paper-panel border-x border-b border-border grid grid-cols-[30%_70%] text-sm tracking-[0.12em] text-text-secondary opacity-0 animate-fade-up"
           style={{ animationDelay: '600ms' }}
         >
           <span className="px-6 py-4 border-r border-border text-xs">{t('home.missionLabel')}</span>
-          <span className="px-6 py-2 flex items-center justify-center gap-1.5">
-            {[0, 1, 2].map((i) => (
-              <span
-                key={i}
-                className="inline-block will-change-transform animate-scale-wave"
+          <span className="px-6 py-2 flex items-center justify-center gap-3">
+            {missionIcons.map((icon, i) => (
+              <img
+                key={icon.src}
+                src={icon.src}
+                alt={icon.alt}
+                className="h-9 w-9 rounded-lg border border-border-subtle bg-bg-tertiary/80 p-1.5 object-contain shadow-[0_6px_16px_rgba(17,17,17,0.08)] will-change-transform animate-scale-wave [image-rendering:pixelated]"
                 style={{ animationDelay: `${i * 0.4}s` }}
-              >
-                🥇
-              </span>
+              />
             ))}
           </span>
         </div>
@@ -352,27 +410,37 @@ export default function Home() {
             </div>
 
             <div className="relative mt-14 pb-2">
-              <div className="absolute left-0 right-0 top-[7px] h-px bg-border hidden lg:block" />
+              <div className="absolute left-0 right-0 top-7 h-px bg-border hidden lg:block" />
 
               <div className="relative grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-x-4 gap-y-8 sm:gap-y-10">
-                {timelineItems.map((item, index) => (
-                  <div
-                    key={item.date + item.text}
-                    className="flex flex-col items-center text-center group opacity-0 animate-fade-up"
-                    style={{ animationDelay: `${800 + index * 100}ms` }}
-                  >
-                    <div className="w-[14px] h-[14px] rounded-full bg-accent border-[3px] border-bg-primary shadow-[0_0_0_1px_rgba(255,106,26,0.25)] z-10 transition-transform duration-300 ease-out group-hover:scale-125 group-hover:shadow-[0_0_0_3px_rgba(255,106,26,0.35)]" />
-                    <div className="w-px h-5 bg-gradient-to-b from-accent/25 to-transparent" />
-                    <div className="pt-2 px-1">
-                      <p className="text-sm md:text-base font-medium text-text-primary leading-snug">
-                        {item.text}
-                      </p>
-                      <p className="mt-1.5 text-xs tracking-[0.12em] text-text-secondary">
-                        {item.date}
-                      </p>
+                {timelineItems.map((item, index) => {
+                  const icon = timelineIcons[index % timelineIcons.length]
+
+                  return (
+                    <div
+                      key={item.date + item.text}
+                      className="flex flex-col items-center text-center group opacity-0 animate-fade-up"
+                      style={{ animationDelay: `${800 + index * 100}ms` }}
+                    >
+                      <div className="relative z-10 flex h-32 w-32 items-center justify-center rounded-full transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:border-accent/35 group-hover:shadow-[0_14px_30px_rgba(255,106,26,0.16)]">
+                        <img
+                          src={icon.src}
+                          alt={icon.alt}
+                          className="h-full w-full rounded-2xl object-contain [image-rendering:pixelated]"
+                        />
+                      </div>
+                      <div className="w-px h-5 bg-gradient-to-b from-accent/25 to-transparent" />
+                      <div className="pt-2 px-1">
+                        <p className="text-sm md:text-base font-medium text-text-primary leading-snug">
+                          {item.text}
+                        </p>
+                        <p className="mt-1.5 text-xs tracking-[0.12em] text-text-secondary">
+                          {item.date}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  )
+                })}
               </div>
             </div>
           </div>
