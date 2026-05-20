@@ -47,7 +47,7 @@
     "visionBody": "持续打磨设计感与工程能力的交叉地带，去做那些既讲究审美，又讲究可维护性和真实体验的产品页面与内容系统。",
     "ctaLabel": "感谢访问",
     "ctaTitle": "须知少时凌云志，曾许人间第一流",
-    "developedWith": "在与GPT-5.4的合作下开发❤",
+    "developedWith": "在与GPT-5.5 & Claude Opus 4.6的合作下开发❤",
     "principles": {
       "items": [
         {
@@ -127,7 +127,7 @@
       { "date": "2020", "text": "技术栈切换到 Go & React" },
       { "date": "2026", "text": "用 GPT-5 重构" }
     ],
-    "partners": ["Cursor", "Trae", "Claude Code", "OpenRouter"],
+    "partners": ["Cursor", "Trae", "Claude Code", "OpenCode"],
     "services": [
       {
         "title": "现在",

@@ -1,14 +1,30 @@
-import { useState, useEffect } from 'react'
-import { NavLink } from 'react-router-dom'
+import { useState, useEffect, useRef } from 'react'
+import { NavLink, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, RadioTower } from 'lucide-react'
 import LanguageSwitcher from './LanguageSwitcher'
 
 // 顶部导航组件，提供公告条、主导航与移动端菜单。
 export default function NavBar() {
   const { t } = useTranslation()
+  const location = useLocation()
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [loadTime, setLoadTime] = useState(null)
+  const renderStartRef = useRef(performance.now())
+  const prevPathRef = useRef(location.pathname)
+
+  if (prevPathRef.current !== location.pathname) {
+    prevPathRef.current = location.pathname
+    renderStartRef.current = performance.now()
+    setLoadTime(null)
+  }
+
+  useEffect(() => {
+    requestAnimationFrame(() => {
+      setLoadTime(Math.round(performance.now() - renderStartRef.current))
+    })
+  }, [location.pathname])
 
   useEffect(() => {
     function onScroll() {
@@ -42,10 +58,14 @@ export default function NavBar() {
     <>
       <nav className={navClass}>
         <div className="border-b border-border overflow-hidden">
-          <div className="container-content h-8 flex items-center">
-            <p className="w-full whitespace-nowrap text-[10px] uppercase tracking-[0.26em] text-text-secondary">
-              {t('nav.marquee')} {t('nav.marquee')} {t('nav.marquee')}
+          <div className="container-content h-8 flex items-center justify-between gap-4">
+            <p className="whitespace-nowrap text-[10px] uppercase tracking-[0.26em] text-text-secondary min-w-0 truncate">
+              {t('nav.marquee')}
             </p>
+            <div className="flex items-center gap-1.5 shrink-0 text-[10px] tracking-[0.16em] text-text-secondary tabular-nums">
+              <RadioTower size={12} strokeWidth={2} className={loadTime !== null ? 'text-accent' : 'text-text-secondary'} />
+              <span>{loadTime !== null ? `${loadTime}ms` : '—'}</span>
+            </div>
           </div>
         </div>
         <div className="container-content flex items-center justify-between h-[72px]">

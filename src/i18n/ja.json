@@ -47,7 +47,7 @@
     "visionBody": "デザイン感とエンジニアリング能力の交差点において、審美眼と保守性そして実際の体験を備えたプロダクトページとコンテンツシステムを構築していく。",
     "ctaLabel": "訪問ありがとうございます",
     "ctaTitle": "少年の大志を忘れるなかれ。かつて世の第一流と誓ったのだから",
-    "developedWith": "GPT-5.4 との協働で開発 ❤",
+    "developedWith": "GPT-5.5 & Claude Opus 4.6 との協働で開発 ❤",
     "principles": {
       "items": [
         {
@@ -127,7 +127,7 @@
       { "date": "2020", "text": "技術スタックを Go & React に移行" },
       { "date": "2026", "text": "GPT-5 で再構築" }
     ],
-    "partners": ["Cursor", "Trae", "Claude Code", "OpenRouter"],
+    "partners": ["Cursor", "Trae", "Claude Code", "OpenCode"],
     "services": [
       {
         "title": "現在",

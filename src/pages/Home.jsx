@@ -15,12 +15,12 @@ import work1 from '../assets/s_1.png'
 import work2 from '../assets/s_2.png'
 import work3 from '../assets/s_3.png'
 import work4 from '../assets/s_4.png'
-import timeline1 from '../assets/t1.png'
-import timeline2 from '../assets/t2.png'
-import timeline3 from '../assets/t3.png'
-import timeline4 from '../assets/t4.png'
-import timeline5 from '../assets/t5.png'
-import timeline6 from '../assets/t6.png'
+import timeline1 from '../assets/t_01.png'
+import timeline2 from '../assets/t_02.png'
+import timeline3 from '../assets/t_03.png'
+import timeline4 from '../assets/t_04.png'
+import timeline5 from '../assets/t_05.png'
+import timeline6 from '../assets/t_06.png'
 import profileImage from '../profile.jpg'
 
 // 工作经历图标，顺序对应 services 数组（现在、2024、2023、2020-2023）
@@ -39,12 +39,12 @@ const missionIcons = [
 ]
 
 const timelineIcons = [
-  { src: timeline1, alt: '旅程像素图标' },
-  { src: timeline2, alt: '工作经历像素图标' },
-  { src: timeline3, alt: '代码项目像素图标' },
-  { src: timeline4, alt: '星辰大海像素图标' },
-  { src: timeline5, alt: '代码项目像素图标' },
-  { src: timeline6, alt: '目标像素图标' },
+  { src: timeline1, alt: 'timeline_01' },
+  { src: timeline2, alt: 'timeline_02' },
+  { src: timeline3, alt: 'timeline_03' },
+  { src: timeline4, alt: 'timeline_04' },
+  { src: timeline5, alt: 'timeline_05' },
+  { src: timeline6, alt: 'timeline_06' },
 ]
 
 function findTextRanges(text, tokens) {
@@ -410,8 +410,6 @@ export default function Home() {
             </div>
 
             <div className="relative mt-14 pb-2">
-              <div className="absolute left-0 right-0 top-7 h-px bg-border hidden lg:block" />
-
               <div className="relative grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-x-4 gap-y-8 sm:gap-y-10">
                 {timelineItems.map((item, index) => {
                   const icon = timelineIcons[index % timelineIcons.length]
@@ -419,10 +417,25 @@ export default function Home() {
                   return (
                     <div
                       key={item.date + item.text}
-                      className="flex flex-col items-center text-center group opacity-0 animate-fade-up"
+                      className="relative flex flex-col items-center text-center group opacity-0 animate-fade-up"
                       style={{ animationDelay: `${800 + index * 100}ms` }}
                     >
-                      <div className="relative z-10 flex h-32 w-32 items-center justify-center rounded-full transition-all duration-300 ease-out group-hover:-translate-y-1 group-hover:border-accent/35 group-hover:shadow-[0_14px_30px_rgba(255,106,26,0.16)]">
+                      {index < timelineItems.length - 1 && (
+                        <div
+                          aria-hidden="true"
+                          className="pointer-events-none absolute left-[calc(50%+3rem)] top-12 hidden w-[calc(100%-6rem)] lg:block"
+                        >
+                          <div className="h-px w-full bg-border/25" />
+                          <span
+                            className="timeline-dot"
+                            style={{ animationDelay: `${index * 0.5}s` }}
+                          />
+                          <svg className="absolute -right-1.5 top-1/2 -translate-y-1/2" width="6" height="8" viewBox="0 0 6 8" fill="none">
+                            <path d="M1 1l3.5 3L1 7" stroke="#FF6A1A" strokeOpacity="0.55" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round"/>
+                          </svg>
+                        </div>
+                      )}
+                      <div className="relative z-10 flex h-24 w-24 items-center justify-center rounded-full transition-all duration-300 ease-out group-hover:-translate-y-1">
                         <img
                           src={icon.src}
                           alt={icon.alt}

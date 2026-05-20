@@ -29,23 +29,54 @@ export default function About() {
         </div>
 
         <div className="border-b border-border px-6 py-10 md:px-10 lg:px-16">
-          <p className="section-label mb-4">{t('about.storyLabel')}</p>
+          <p
+            className="section-label mb-4 opacity-0 animate-fade-up"
+            style={{ animationDelay: '320ms' }}
+          >
+            {t('about.storyLabel')}
+          </p>
           <div className="max-w-3xl space-y-5">
-            <p className="text-2xl md:text-3xl font-semibold tracking-tight leading-tight">
+            <p
+              className="text-2xl md:text-3xl font-semibold tracking-tight leading-tight opacity-0 animate-fade-up"
+              style={{ animationDelay: '400ms' }}
+            >
               {t('about.ambitionTitle')}
             </p>
-            <p className="text-text-secondary leading-relaxed">{t('about.ambitionBody')}</p>
-            <p className="text-text-secondary leading-relaxed">{t('about.originBody')}</p>
+            <p
+              className="text-text-secondary leading-relaxed opacity-0 animate-fade-up"
+              style={{ animationDelay: '480ms' }}
+            >
+              {t('about.ambitionBody')}
+            </p>
+            <p
+              className="text-text-secondary leading-relaxed opacity-0 animate-fade-up"
+              style={{ animationDelay: '560ms' }}
+            >
+              {t('about.originBody')}
+            </p>
           </div>
         </div>
 
         <div className="border-b border-border px-6 py-10 md:px-10 lg:px-16">
           <div className="max-w-3xl">
-            <p className="section-label mb-4">{t('about.links.label')}</p>
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
+            <p
+              className="section-label mb-4 opacity-0 animate-fade-up"
+              style={{ animationDelay: '640ms' }}
+            >
+              {t('about.links.label')}
+            </p>
+            <h2
+              className="text-3xl md:text-4xl font-semibold tracking-tight opacity-0 animate-fade-up"
+              style={{ animationDelay: '720ms' }}
+            >
               {t('about.links.title')}
             </h2>
-            <p className="mt-4 text-text-secondary leading-relaxed">{t('about.links.subtitle')}</p>
+            <p
+              className="mt-4 text-text-secondary leading-relaxed opacity-0 animate-fade-up"
+              style={{ animationDelay: '800ms' }}
+            >
+              {t('about.links.subtitle')}
+            </p>
           </div>
           <div className="mt-8 grid gap-4 md:grid-cols-2">
             {FRIENDLY_LINKS.map((link, index) => (
@@ -54,7 +85,8 @@ export default function About() {
                 href={link.href}
                 target="_blank"
                 rel="noreferrer"
-                className="group border border-border bg-bg-secondary p-6 transition-colors hover:bg-bg-tertiary/55"
+                className="group border border-border bg-bg-secondary p-6 transition-colors hover:bg-bg-tertiary/55 opacity-0 animate-fade-up"
+                style={{ animationDelay: `${880 + index * 100}ms` }}
               >
                 <div className="flex items-start justify-between gap-4">
                   <div>
@@ -73,17 +105,31 @@ export default function About() {
 
         <div className="border-b border-border px-6 py-10 md:px-10 lg:px-16">
           <div className="max-w-3xl">
-            <p className="section-label mb-4">{t('about.stack.label')}</p>
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
+            <p
+              className="section-label mb-4 opacity-0 animate-fade-up"
+              style={{ animationDelay: '1080ms' }}
+            >
+              {t('about.stack.label')}
+            </p>
+            <h2
+              className="text-3xl md:text-4xl font-semibold tracking-tight opacity-0 animate-fade-up"
+              style={{ animationDelay: '1160ms' }}
+            >
               {t('about.stack.title')}
             </h2>
-            <p className="mt-4 text-text-secondary leading-relaxed">{t('about.stack.subtitle')}</p>
+            <p
+              className="mt-4 text-text-secondary leading-relaxed opacity-0 animate-fade-up"
+              style={{ animationDelay: '1240ms' }}
+            >
+              {t('about.stack.subtitle')}
+            </p>
           </div>
           <div className="mt-8 flex flex-wrap gap-3">
-            {stacks.map((stack) => (
+            {stacks.map((stack, index) => (
               <span
                 key={stack}
-                className="inline-flex items-center border border-border bg-bg-secondary px-4 py-3 text-sm uppercase tracking-[0.14em] text-text-secondary"
+                className="inline-flex items-center border border-border bg-bg-secondary px-4 py-3 text-sm uppercase tracking-[0.14em] text-text-secondary opacity-0 animate-fade-up"
+                style={{ animationDelay: `${1320 + index * 60}ms` }}
               >
                 {stack}
               </span>
@@ -94,12 +140,23 @@ export default function About() {
         <div className="border-b border-border px-6 py-10 md:px-10 lg:px-16">
           <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
             <div>
-              <p className="section-label mb-3">{t('about.ctaLabel')}</p>
-              <h2 className="display-title text-3xl md:text-4xl leading-[0.95]">
+              <p
+                className="section-label mb-3 opacity-0 animate-fade-up"
+                style={{ animationDelay: '1500ms' }}
+              >
+                {t('about.ctaLabel')}
+              </p>
+              <h2
+                className="display-title text-3xl md:text-4xl leading-[0.95] opacity-0 animate-fade-up"
+                style={{ animationDelay: '1580ms' }}
+              >
                 {t('about.ctaTitle')}
               </h2>
             </div>
-            <div className="flex flex-col gap-3 sm:flex-row">
+            <div
+              className="flex flex-col gap-3 sm:flex-row opacity-0 animate-fade-up"
+              style={{ animationDelay: '1660ms' }}
+            >
               <Button as="a" href={`mailto:${EMAIL}`} variant="primary" size="lg" icon={Mail}>
                 {t('cta.email')}
               </Button>
@@ -119,7 +176,10 @@ export default function About() {
         </div>
 
         <div className="px-6 py-8 md:px-10 md:py-10 text-center">
-          <p className="text-sm uppercase tracking-[0.18em] text-text-muted">
+          <p
+            className="text-sm tracking-[0.18em] text-text-muted opacity-0 animate-fade-up"
+            style={{ animationDelay: '1780ms' }}
+          >
             {t('about.developedWith')}
           </p>
         </div>

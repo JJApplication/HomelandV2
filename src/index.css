@@ -32,6 +32,47 @@
 }
 
 @layer utilities {
+  @keyframes timelineDotFlow {
+    0% {
+      left: -2%;
+      opacity: 0;
+    }
+    6% {
+      opacity: 1;
+    }
+    85% {
+      opacity: 0.85;
+    }
+    100% {
+      left: 100%;
+      opacity: 0;
+    }
+  }
+
+  .timeline-dot {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #FF6A1A;
+    box-shadow: 0 0 7px 2px rgba(255, 106, 26, 0.35);
+    animation: timelineDotFlow 2.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  }
+
+  .timeline-dot::after {
+    content: '';
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 2px;
+    border-radius: 1px;
+    background: linear-gradient(to right, transparent, rgba(255, 106, 26, 0.4));
+  }
+
   .container-content {
     max-width: 1200px;
     margin-left: auto;

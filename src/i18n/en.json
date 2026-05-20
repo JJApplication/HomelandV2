@@ -47,7 +47,7 @@
     "visionBody": "Keep honing the intersection of design sensibility and engineering capability, creating product pages and content systems that balance aesthetics, maintainability, and genuine user experience.",
     "ctaLabel": "Thanks for visiting",
     "ctaTitle": "Remember the ambition of youth, once promising to be among the best",
-    "developedWith": "Developed in collaboration with GPT-5.4 ❤",
+    "developedWith": "Developed in collaboration with GPT-5.5 & Claude Opus 4.6 ❤",
     "principles": {
       "items": [
         {
@@ -127,7 +127,7 @@
       { "date": "2020", "text": "Switch tech stack to go & react" },
       { "date": "2026", "text": "Rebuild with GPT-5" }
     ],
-    "partners": ["Cursor", "Trae", "Claude Code", "OpenRouter"],
+    "partners": ["Cursor", "Trae", "Claude Code", "OpenCode"],
     "services": [
       {
         "title": "Now",
