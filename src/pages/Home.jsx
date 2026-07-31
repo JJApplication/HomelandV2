@@ -112,6 +112,7 @@ export default function Home() {
   const services = t('home.services', { returnObjects: true })
   const titleBottom = t('hero.titleBottom')
   const [isProfileSpotlighted, setIsProfileSpotlighted] = useState(false)
+  const [missionHovered, setMissionHovered] = useState(false)
   const timelineItems = t('home.timeline', { returnObjects: true })
   const titleBottomRanges = useMemo(
     () => resolveTitleScrambleRanges(i18n.language, titleBottom),
@@ -362,8 +363,11 @@ export default function Home() {
           <span>{t('home.footerNote')}</span>
         </div>
 
-        <div className="paper-panel mt-8 border border-border px-6 py-8 md:px-10 md:py-10 cursor-pointer opacity-0 animate-fade-up"
+        <div
+          className="paper-panel mt-8 border border-border px-6 py-8 md:px-10 md:py-10 cursor-pointer opacity-0 animate-fade-up"
           style={{ animationDelay: '500ms' }}
+          onMouseEnter={() => setMissionHovered(true)}
+          onMouseLeave={() => setMissionHovered(false)}
         >
           <div className="grid gap-6 md:grid-cols-[72px_1fr_72px] md:items-center">
             <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-2xl bg-bg-tertiary/100 p-2 shadow-[0_10px_24px_rgba(17,17,17,0.20)] transition-transform duration-300 ease-out hover:-translate-y-1">
@@ -377,6 +381,7 @@ export default function Home() {
               <FoilRevealText
                 originalText={t('home.missionOriginal')}
                 transformedText={t('home.missionTransformed')}
+                active={missionHovered}
               />
             </div>
           </div>
