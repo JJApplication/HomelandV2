@@ -330,7 +330,7 @@ export default function Home() {
                     <img
                       src={wIcon.src}
                       alt={wIcon.alt}
-                      className="h-full w-full object-contain [image-rendering:pixelated]"
+                      className="h-full w-full rounded-md object-contain [image-rendering:pixelated]"
                     />
                   </div>
                 </div>
