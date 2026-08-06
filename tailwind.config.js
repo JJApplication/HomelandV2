@@ -41,7 +41,7 @@ export default {
       animation: {
         'fade-up': 'fadeUp 0.6s ease-out forwards',
         'fade-in': 'fadeIn 0.4s ease-out forwards',
-        'scale-wave': 'scaleWave 1.8s ease-in-out infinite',
+        'mission-carousel': 'missionCarousel 14s linear infinite',
       },
       keyframes: {
         fadeUp: {
@@ -52,9 +52,9 @@ export default {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
         },
-        scaleWave: {
-          '0%, 100%': { transform: 'scale(1)' },
-          '50%': { transform: 'scale(1.35)' },
+        missionCarousel: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
         },
       },
     },

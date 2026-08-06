@@ -6,11 +6,10 @@ import ChaosPendulum from '../components/ChaosPendulum'
 import ScrambleText from '../components/ScrambleText'
 import FoilRevealText from '../components/FoilRevealText'
 import { EMAIL, GITHUB } from '../constants'
-import pixelCareerIcon from '../assets/pixel-career.svg'
-import pixelCodeProjectIcon from '../assets/pixel-code-project.svg'
-import pixelGoalIcon from '../assets/pixel-goal.svg'
-import pixelJourneyIcon from '../assets/pixel-journey.svg'
-import pixelStarsSeaIcon from '../assets/pixel-stars-sea.svg'
+import career1 from '../assets/career1.png'
+import career2 from '../assets/career2.png'
+import career3 from '../assets/career3.png'
+import career4 from '../assets/career4.png'
 import work1 from '../assets/s_1.png'
 import work2 from '../assets/s_2.png'
 import work3 from '../assets/s_3.png'
@@ -33,9 +32,10 @@ const workIcons = [
 const TITLE_PUNCTUATION_REGEX = /[.,!?;:，。！？；：、]/u
 
 const missionIcons = [
-  { src: pixelGoalIcon, alt: '目标像素图标' },
-  { src: pixelStarsSeaIcon, alt: '星辰大海像素图标' },
-  { src: pixelCodeProjectIcon, alt: '代码项目像素图标' },
+  { src: career1, alt: '星辰大海' },
+  { src: career2, alt: '扬帆' },
+  { src: career3, alt: '眺望' },
+  { src: career4, alt: '远航' },
 ]
 
 const timelineIcons = [
@@ -370,11 +370,11 @@ export default function Home() {
           onMouseLeave={() => setMissionHovered(false)}
         >
           <div className="grid gap-6 md:grid-cols-[72px_1fr_72px] md:items-center">
-            <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-2xl bg-bg-tertiary/100 p-2 shadow-[0_10px_24px_rgba(17,17,17,0.20)] transition-transform duration-300 ease-out hover:-translate-y-1">
+            <div className="mx-auto h-20 w-20 overflow-hidden rounded-2xl shadow-[0_10px_24px_rgba(17,17,17,0.20)] transition-transform duration-300 ease-out hover:-translate-y-1">
               <img
-                src={pixelStarsSeaIcon}
+                src={career1}
                 alt="icon"
-                className="h-full w-full object-contain [image-rendering:pixelated]"
+                className="h-full w-full object-cover"
               />
             </div>
             <div className="text-sm md:text-base tracking-[0.12em] text-text-secondary leading-relaxed text-center md:text-left">
@@ -391,16 +391,22 @@ export default function Home() {
           style={{ animationDelay: '600ms' }}
         >
           <span className="px-6 py-4 border-r border-border text-xs">{t('home.missionLabel')}</span>
-          <span className="px-6 py-2 flex items-center justify-center gap-3">
-            {missionIcons.map((icon, i) => (
-              <img
-                key={icon.src}
-                src={icon.src}
-                alt={icon.alt}
-                className="h-9 w-9 rounded-lg border border-border-subtle bg-bg-tertiary/80 p-1.5 object-contain shadow-[0_6px_16px_rgba(17,17,17,0.08)] will-change-transform animate-scale-wave [image-rendering:pixelated]"
-                style={{ animationDelay: `${i * 0.4}s` }}
-              />
-            ))}
+          <span className="px-6 py-2 flex items-center justify-center">
+            <div
+              className="relative h-10 w-40 overflow-hidden [mask-image:linear-gradient(90deg,transparent,black_14%,black_86%,transparent)]"
+              aria-hidden="true"
+            >
+              <div className="flex w-max gap-2.5 animate-mission-carousel hover:[animation-play-state:paused]">
+                {[...missionIcons, ...missionIcons].map((icon, i) => (
+                  <img
+                    key={`${icon.alt}-${i}`}
+                    src={icon.src}
+                    alt=""
+                    className="h-10 w-10 shrink-0 rounded-lg border border-border-subtle bg-bg-tertiary/80 object-cover shadow-[0_6px_16px_rgba(17,17,17,0.08)]"
+                  />
+                ))}
+              </div>
+            </div>
           </span>
         </div>
 
